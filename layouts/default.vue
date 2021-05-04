@@ -63,7 +63,11 @@ export default {
 
             this.$socket.onmessage = (event) => {
                 this.$store.commit('setTime', Number(event.data))
-                console.log('reveived')
+                // end
+
+                if (Number(event.data) <= 0) {
+                    this.reset()
+                }
             };
             this.ready = true
         }
