@@ -20,7 +20,7 @@ export default {
         '$store.state.time'(val) {
             //   console.log(val)
             if (val == 0) {
-              this.reset()
+                this.reset()
             }
         }
     },
@@ -44,22 +44,26 @@ export default {
                 var v = this.$store.getters.videoMode ? false : true
                 this.$store.commit('setVideoMode', v)
                 if (end) {
-                this.$store.commit('setTime', 10000)
-                this.$socket.send('resetTimer');
+                    this.$store.commit('setTime', 10000)
+                    this.$socket.send('resetTimer');
                 }
             }, 1000);
         },
     },
-    mounted() {
+    async mounted() {
 
         this.$nuxt.$on('reset', (end) => {
             this.reset(end)
         })
-
-        this.$socket.send('start');
-        this.$socket.onmessage = (event) => {
-            this.$store.commit('setTime', Number(event.data))
-        };
+        try {
+            this.$socket.send('start');
+            this.$socket.onmessage = (event) => {
+                this.$store.commit('setTime', Number(event.data))
+                console.log('reveived')
+            };
+        } catch (error) {
+            console.log(error)
+        }
 
     },
 
