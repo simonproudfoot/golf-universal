@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-    <div @click="test" class="text-white testTimer"><small> {{$store.state.time}} min until next show</small>
+    <div @click="test" class="text-white testTimer"><small> {{$store.state.time}} seconds until next show</small>
     </div>
     <Nuxt />
 </div>
@@ -19,7 +19,7 @@ export default {
     watch: {
         '$store.state.time'(val) {
             //   console.log(val)
-            if (val == 0) {
+            if (val < 0) {
                 this.reset()
             }
         }
