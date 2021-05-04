@@ -50,12 +50,12 @@ export default {
             }, 1000);
         },
     },
-    async mounted() {
+    mounted() {
 
         this.$nuxt.$on('reset', (end) => {
             this.reset(end)
         })
-        this.$socket.onopen = function (event) {
+        this.$socket.onopen = (event) => {
             console.log('connected to server')
             this.$socket.send('start');
         }
