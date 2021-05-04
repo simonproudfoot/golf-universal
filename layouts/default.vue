@@ -57,7 +57,7 @@ export default {
         })
         if (this.ready === false) {
             this.$socket.onopen = (event) => {
-                console.log('connected to server')
+                console.log('connected to server:', event)
                 this.$socket.send('start');
             }
 
