@@ -27,7 +27,7 @@ export default {
     methods: {
         test() {
             //   this.$socket.send('resetTimer');
-            this.$socket.send('stop');
+            this.$socket.send('start');
         },
         goHome() {
             this.$store.commit('resetAll')
@@ -45,7 +45,7 @@ export default {
                 this.$store.commit('setVideoMode', v)
                 if (end) {
                     this.$store.commit('setTime', 10000)
-                    this.$socket.send('resetTimer');
+                    this.$socket.send('start');
                 }
             }, 1000);
         },
