@@ -16,7 +16,7 @@ export default {
   },
 
   env: {
-    version: ''
+    version: 'online' // local, online
   },
 
   server: {
