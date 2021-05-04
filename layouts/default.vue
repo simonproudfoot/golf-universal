@@ -55,15 +55,14 @@ export default {
         this.$nuxt.$on('reset', (end) => {
             this.reset(end)
         })
-        try {
+        this.$socket.onopen = function (event) {
+            console.log('connected to server')
             this.$socket.send('start');
-            this.$socket.onmessage = (event) => {
-                this.$store.commit('setTime', Number(event.data))
-                console.log('reveived')
-            };
-        } catch (error) {
-            console.log(error)
         }
+        this.$socket.onmessage = (event) => {
+            this.$store.commit('setTime', Number(event.data))
+            console.log('reveived')
+        };
 
     },
 
