@@ -1,62 +1,78 @@
 <template>
-  <div>
+<div id="app">
+    <div @click="test" class="text-white testTimer"><small> {{$store.state.time}} min until next show</small>
+    </div>
     <Nuxt />
-  </div>
+</div>
 </template>
 
-<style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+export default {
+    data: function () {
+        return {
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
+        }
+    },
+    computed: {
+        routes() { return this.$router.getRoutes() }
+    },
+    watch: {
+        '$store.state.time'(val) {
+            //   console.log(val)
+            if (val == 0) {
+              this.reset()
+            }
+        }
+    },
+    methods: {
+        test() {
+            //   this.$socket.send('resetTimer');
+            this.$socket.send('stop');
+        },
+        goHome() {
+            this.$store.commit('resetAll')
+            this.$gsap.to('.mainSlider', { autoAlpha: 0, duration: 0.4 })
+            this.$gsap.to('.mainHead h1', { y: -100, autoAlpha: 0, stagger: 0.2, ease: 'power2.inOut' })
+            this.$gsap.to('.mainHead', { y: -100, autoAlpha: 0, duration: 0.6, delay: 0.5, ease: 'power2.inOut' })
+        },
+        reset(end) {
+            this.$store.commit('resetAll')
+            this.$gsap.to('.mainSlider', { autoAlpha: 0, duration: 0.4 })
+            this.$gsap.to('.mainHead h1', { y: -100, autoAlpha: 0, stagger: 0.2, ease: 'power2.inOut' })
+            this.$gsap.to('.mainHead', { y: -100, autoAlpha: 0, duration: 0.6, delay: 0.5, ease: 'power2.inOut' })
+            setTimeout(() => {
+                var v = this.$store.getters.videoMode ? false : true
+                this.$store.commit('setVideoMode', v)
+                if (end) {
+                this.$store.commit('setTime', 10000)
+                this.$socket.send('resetTimer');
+                }
+            }, 1000);
+        },
+    },
+    mounted() {
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+        this.$nuxt.$on('reset', (end) => {
+            this.reset(end)
+        })
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+        this.$socket.send('start');
+        this.$socket.onmessage = (event) => {
+            this.$store.commit('setTime', Number(event.data))
+        };
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+    },
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+}
+</script>
+
+<style lang="scss">
+.testTimer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    z-index: 9999;
+
 }
 </style>

@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'websocket-test',
+    title: 'Totems',
     htmlAttrs: {
       lang: 'en'
     },
@@ -22,8 +22,19 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-  ],
+    '~/assets/scss/colors.scss',
+    '~/assets/scss/type.scss',
+    '~/assets/scss/main.scss'
 
+  ],
+  gsap: {
+    extraPlugins: {
+      cssRule: true,
+    }
+  },
+
+
+  
   babel:{
     plugins: [
       ['@babel/plugin-proposal-private-methods', { loose: true }]
@@ -31,18 +42,27 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~//plugins/websocket.js'],
+  plugins: ['~//plugins/websocket.js', '~/plugins/vidle.js',],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    // https://go.nuxtjs.dev/tailwindcss
+    '@nuxtjs/tailwindcss',
+    'nuxt-gsap-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    scss: ['./assets/scss/*.scss']
+  },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
