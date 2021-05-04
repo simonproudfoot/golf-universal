@@ -19,7 +19,7 @@ export default {
     watch: {
         '$store.state.time'(val) {
 
-            if (val < 0) {
+            if (val <= 0) {
                 this.reset()
             }
         }
