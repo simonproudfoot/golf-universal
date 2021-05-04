@@ -14,11 +14,21 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  server: {
+    host: '0' // default: localhost
+  },
   ssr: false, // Disable Server Side rendering
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
+
+  babel:{
+    plugins: [
+      ['@babel/plugin-proposal-private-methods', { loose: true }]
+    ]
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~//plugins/websocket.js'],
