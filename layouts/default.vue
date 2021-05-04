@@ -10,7 +10,7 @@
 export default {
     data: function () {
         return {
-
+            ready: false
         }
     },
     computed: {
@@ -55,14 +55,18 @@ export default {
         this.$nuxt.$on('reset', (end) => {
             this.reset(end)
         })
-        this.$socket.onopen = (event) => {
-            console.log('connected to server')
-            this.$socket.send('start');
+        if (this.ready === false) {
+            this.$socket.onopen = (event) => {
+                console.log('connected to server')
+                this.$socket.send('start');
+            }
+
+            this.$socket.onmessage = (event) => {
+                this.$store.commit('setTime', Number(event.data))
+                console.log('reveived')
+            };
+            this.ready = true
         }
-        this.$socket.onmessage = (event) => {
-            this.$store.commit('setTime', Number(event.data))
-            console.log('reveived')
-        };
 
     },
 
