@@ -15,6 +15,10 @@ export default {
     ]
   },
 
+  env: {
+    version: ''
+  },
+
   server: {
     host: '0' // default: localhost
   },
