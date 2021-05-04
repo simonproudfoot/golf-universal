@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-    <div @click="test" class="text-white testTimer"><small> {{$store.state.time}} minutes until next show</small>
+    <div @click="test" class="text-white testTimer"><small> {{$store.state.time}} seconds until next show</small>
     </div>
     <Nuxt />
 </div>
