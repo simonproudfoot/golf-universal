@@ -12,7 +12,7 @@
                 <h1>Skip tp video</h1>
             </button> -->
         <transition name="fade-out">
-            <slider class="mainSlider" v-if="$store.state.view == 'main'" :images="['large.jpg', 'large2.jpg']" />
+            <slider class="mainSlider" v-if="$store.state.view == 'main'" :images="['Iwasthere1.jpg', 'Iwasthere2.jpg', 'Iwasthere3.jpg']" />
         </transition>
         <interactive :primaryColour="pColor" />
         <bottom :primaryColour="pColor" />

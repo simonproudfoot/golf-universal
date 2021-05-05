@@ -8,7 +8,7 @@ export const state = () => ({
   story: null,
   interactiveKey: 0,
   iWasThere: [{
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/Jack_Nicklaus.jpg',
     title: 'Jack Nicklaus v Doug Sanders, 1970',
     heading: `<h1 class="text-7xl year">1979</h1>
       <h1 class="text-9xl font-light">DOUG</h1>
@@ -21,7 +21,7 @@ export const state = () => ({
     text: 'A missed putt by Doug Sanders is one of the most famous in the history of The Open.  In the play-off Sanders loses by one shot to Jack Nicklaus, who wins his second Claret Jug.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/Justin_Rose.jpg',
     title: 'Justin Rose, 1998',
     heading: `<h1 class="text-7xl year">1989</h1><h1 class="text-9xl font-light">JUSTIN</h1><h1 class="text-9xl font-bold">ROSE</h1>`,
     video: 'AV 5.1.1_Justin Rose, 1998.mp4',
@@ -29,7 +29,7 @@ export const state = () => ({
     text: 'The crowd at Birkdale roars with excitement as 17-year-old amateur Justin Rose birdies the 18th and ties for 4th place.  This is the best British amateur finish since Roger Wethered in 1921.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/Costantino_Rocca.jpg',
     title: 'Constantino Rocca, 1995',
     heading: `<h1 class="text-7xl year">1995</h1><h1 class="text-9xl font-light">CONSTANTINO</h1><h1 class="text-9xl font-bold">ROCCA</h1>`,
     video: 'AV 5.1.1_Constantino Rocca, 1995.mp4',
@@ -37,7 +37,7 @@ export const state = () => ({
     text: 'Costantino Rocca fluffs his chip to the 18th and then produces the shot of the Championship, holing a 65-foot putt from the Valley of Sin to tie the eventual winner, John Daly.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/Ballesteros.jpg',
     title: 'Seve Ballesteros, 1984',
     heading: `<h1 class="text-7xl year">1984</h1><h1 class="text-9xl font-light">SEVE</h1><h1 class="text-9xl font-bold">BALLESTEROS</h1>`,
     video: 'AV 5.1.1_Seve Ballesteros, 1984.mp4',
@@ -45,7 +45,7 @@ export const state = () => ({
     text: 'Following a wonderful second shot to the last Seve Ballesteros sinks the winning putt to claim his second Open Championship. His joyous fist pump is one of the iconic moments in sport.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/Tiger_Woods.jpg',
     title: 'Tiger Woods, 2006',
     heading: `<h1 class="text-7xl year">2006</h1><h1 class="text-9xl font-light">TIGER</h1><h1 class="text-9xl font-bold">WOODS</h1>`,
     video: 'AV 5.1.1_Tiger Woods, 2006.mp4',
@@ -53,7 +53,7 @@ export const state = () => ({
     text: 'Woods claims a second successive victory at Hoylake, ‘blown upon by mighty winds, breeder of mighty champions.’  An emotional victory coming just two months after the death of his father, Earl.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/2009_play_off.jpg',
     title: 'Tom Warson v Stuart Cink, 2009',
     heading: `<h1 class="text-7xl year">2009</h1>
       <h1 class="text-9xl font-light">TOM</h1>
@@ -66,7 +66,7 @@ export const state = () => ({
     text: 'Tom Watson nearly steps into the record books. At 59 years old, he is within one stroke of defeating Stewart Cink, and claiming his sixth Open title.  Watson misses and Cink wins the play-off.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/Rory_Mcllroy.jpg',
     title: 'Rory McIlroy, 2014',
     heading: `<h1 class="text-7xl year">1995</h1><h1 class="text-9xl font-light">RORY</h1><h1 class="text-9xl font-bold">MCILROY</h1>`,
     video: 'AV 5.1.1_Rory McIlroy, 2014.mp4',
@@ -82,7 +82,7 @@ export const state = () => ({
     text: 'After facing trouble at the 13th Jordan Spieth shows remarkable resilience to regain the lead and win the Championship at Birkdale. Spieth’s final round, a stunning performance, is truly inspiring.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/Shane_Lowry.jpg',
     title: 'Shane Lowry, 2019',
     heading: `<h1 class="text-7xl year">1995</h1><h1 class="text-9xl font-light">SHANE</h1><h1 class="font-bold text-9xl">LOWRY</h1>`,
     video: 'AV 5.1.1_Shane Lowry, 2019.mp4',

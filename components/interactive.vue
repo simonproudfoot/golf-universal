@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <span v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="gradientOverlay" style="height: 200px; bottom: 100px"></span>
+    <span v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="gradientOverlay" style="height: 200px; bottom: 190px"></span>
     <div v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="interactive__inner">
         <div class="card fadeUp text-left p-8" v-for="(section, i) in storys" :key="i" @click="openStory(i)" :style="{ backgroundImage: 'url(' + require('@/assets/img/'+section.thumb+'') + ')' }">
             <span @click="openStory(i)" class="text-5xl text-white">{{section.title}}</span>

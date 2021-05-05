@@ -51,7 +51,7 @@ export default {
         },
     },
     mounted() {
-
+        console.log('Its all working, but if the timers going too fast it seems to miss the video trigger')
         this.$nuxt.$on('reset', (end) => {
             this.reset(end)
         })
