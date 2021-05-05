@@ -16,14 +16,14 @@ export default {
     computed: {
         routes() { return this.$router.getRoutes() }
     },
-    watch: {
-        '$store.state.time'(val) {
+    // watch: {
+    //     '$store.state.time'(val) {
 
-            if (val <= 0) {
-                this.reset()
-            }
-        }
-    },
+    //         if (val <= 0) {
+    //             this.reset()
+    //         }
+    //     }
+    // },
     methods: {
         test() {
             //   this.$socket.send('resetTimer');
@@ -51,12 +51,14 @@ export default {
         },
     },
     mounted() {
-     //   console.log('Its all working, but if the timers going too fast it seems to miss the video trigger')
+        //   console.log('Its all working, but if the timers going too fast it seems to miss the video trigger')
         this.$nuxt.$on('reset', (end) => {
             this.reset(end)
         })
-        if (this.ready === false) {
+        // if (this.ready === false) {
+        this.$nextTick(() => {
             this.$socket.onopen = (event) => {
+                
                 console.log('connected to server:', event)
                 this.$socket.send('start');
             }
@@ -65,17 +67,16 @@ export default {
                 this.$store.commit('setTime', Number(event.data))
                 // end
 
-                if(event.data === 'reset' || Number(event.data) <= 0){
-                       this.reset()
+                if (event.data === 'reset') {
+                    this.reset()
+                    console.log('received order to reset')
                 }
 
-              
             };
             this.ready = true
-        }
+        })
 
-    },
-
+    }
 }
 </script>
 
@@ -87,6 +88,5 @@ export default {
     height: 50px;
     z-index: 9999;
     background-color: $darkBlue;
-
 }
 </style>
