@@ -51,7 +51,7 @@ export default {
         },
     },
     mounted() {
-        console.log('Its all working, but if the timers going too fast it seems to miss the video trigger')
+     //   console.log('Its all working, but if the timers going too fast it seems to miss the video trigger')
         this.$nuxt.$on('reset', (end) => {
             this.reset(end)
         })
@@ -65,9 +65,11 @@ export default {
                 this.$store.commit('setTime', Number(event.data))
                 // end
 
-                if (Number(event.data) <= 0) {
-                    this.reset()
+                if(event.data === 'reset' || Number(event.data) <= 0){
+                       this.reset()
                 }
+
+              
             };
             this.ready = true
         }
