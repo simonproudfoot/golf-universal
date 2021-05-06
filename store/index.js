@@ -74,7 +74,7 @@ export const state = () => ({
     text: 'One of only seven winners to be outright leader after each round, Rory McIlroy dominates the 2014 Open. Aged just 25, he represents the rise of a new generation of champions.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/Jordan_Spieth.jpg',
     title: 'Jordan Spieth, 2017',
     heading: `<h1 class="text-7xl year">1995</h1><h1 class="text-9xl font-light">JORDAN</h1><h1 class="text-9xl font-bold">SPIETH</h1>`,
     video: 'AV 5.1.1_Jordan Spieth, 2017.mp4',
