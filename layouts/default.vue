@@ -1,11 +1,11 @@
 <template>
 <div id="app">
-    <div @click="test" class="text-white testTimer"><small> {{$store.state.time}} seconds until next show</small>
+    <div @click="goHome" class="text-white testTimer"><small> {{$store.state.time}} seconds until next show</small>
     </div>
     <Nuxt />
+    <v-idle style="display:none" :duration="300" :loop="true" @idle="goHome" />
 </div>
 </template>
-
 <script>
 export default {
     data: function () {
@@ -16,24 +16,12 @@ export default {
     computed: {
         routes() { return this.$router.getRoutes() }
     },
-    // watch: {
-    //     '$store.state.time'(val) {
-
-    //         if (val <= 0) {
-    //             this.reset()
-    //         }
-    //     }
-    // },
     methods: {
         test() {
-            //   this.$socket.send('resetTimer');
             this.$socket.send('start');
         },
         goHome() {
-            this.$store.commit('resetAll')
-            this.$gsap.to('.mainSlider', { autoAlpha: 0, duration: 0.4 })
-            this.$gsap.to('.mainHead h1', { y: -100, autoAlpha: 0, stagger: 0.2, ease: 'power2.inOut' })
-            this.$gsap.to('.mainHead', { y: -100, autoAlpha: 0, duration: 0.6, delay: 0.5, ease: 'power2.inOut' })
+            this.$store.commit('resetAll')       
         },
         reset(end) {
             this.$store.commit('resetAll')
@@ -51,11 +39,11 @@ export default {
         },
     },
     mounted() {
-        //   console.log('Its all working, but if the timers going too fast it seems to miss the video trigger')
+        
         this.$nuxt.$on('reset', (end) => {
             this.reset(end)
         })
-        // if (this.ready === false) {
+
         this.$nextTick(() => {
             this.$socket.onopen = (event) => {
                 
@@ -65,7 +53,7 @@ export default {
 
             this.$socket.onmessage = (event) => {
                 this.$store.commit('setTime', Number(event.data))
-                // end
+           
 
                 if (event.data === 'reset') {
                     this.reset()
