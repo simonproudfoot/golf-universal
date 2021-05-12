@@ -23,6 +23,7 @@ export default {
     host: '0' // default: localhost
   },
   ssr: false, // Disable Server Side rendering
+  target: 'static',
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [

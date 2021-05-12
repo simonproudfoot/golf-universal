@@ -25,7 +25,6 @@
     <story class="storyContent" v-if="$store.state.view == 'storySelect' && $store.state.story !== null" :key="storyKey" :primaryColour="primaryColour" />
 </section>
 </template>
-
 <script>
 export default {
     name: 'interactive',
@@ -38,9 +37,10 @@ export default {
     },
     methods: {
         loadStories() {
-            this.$gsap.set(".fadeUp", { y: 100, autoAlpha: 0 });
-            this.$gsap.to(".fadeUp", 0.7, { y: 0, autoAlpha: 1, stagger: 0.2 });
-            this.$gsap.from(".gradientOverlay", { y: 0, autoAlpha: 0, delay: 0.5 });
+            this.$gsap.set(".fadeUp", { y: 0, x: -500, autoAlpha: 0 });
+            this.$gsap.to(".fadeUp", 0.7, { x: 0, autoAlpha: 1, stagger: 0.2, ease: 'back.out(1.7)'});
+            this.$gsap.from(".fadeUp span", 0.7, { x: -100, autoAlpha: 0, stagger: 0.2, delay: 0.3, ease: 'back.out(1.7)'});
+            this.$gsap.from(".gradientOverlay", { x: 0, autoAlpha: 0, delay: 0.5 });
         },
         openStory(storyId) {
             this.storyKey++
@@ -49,7 +49,7 @@ export default {
     },
     watch: {
         '$store.state.resetKey': function () {
-            this.$gsap.to(".fadeUp, .animateTitle", { y: -100, autoAlpha: 0, stagger: 0.1 });
+            this.$gsap.to(".fadeUp, .animateTitle", { y: 500, autoAlpha: 0, stagger: 0.1 });
         },
         '$store.state.interactiveKey': function () {
             this.$gsap.set(".fadeUp", { y: 300, autoAlpha: 0 });

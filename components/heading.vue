@@ -10,11 +10,11 @@
         <h1 class="text-9xl font-bold">{{titleB}}</h1>
     </div>
     <div class="sectionTitle">
-        <transition name="fadeY" mode="out-in">
+        <!-- <transition name="fadeY" mode="out-in"> -->
             <h1 v-if="$store.state.story == null && $store.state.view == 'storySelect'" class="text-9xl font-light animateTitle">Select a story to explore...</h1>
             <div :class="routeName" v-if="$store.state.story !== null" v-html="story.heading" :key="tKey" class="font-normal animateTitle">
             </div>
-        </transition>
+        <!-- </transition> -->
     </div>
 </header>
 </template>
