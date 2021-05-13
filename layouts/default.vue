@@ -39,11 +39,9 @@ export default {
         },
     },
     mounted() {
-        
         this.$nuxt.$on('reset', (end) => {
             this.reset(end)
         })
-
         this.$nextTick(() => {
             this.$socket.onopen = (event) => {
                 

@@ -159,6 +159,9 @@ export default {
         this.$gsap.fromTo('.video', { opacity: 0, y: 150 }, { opacity: 1, y: 0, duration: 0.8 })
         this.$gsap.fromTo('.textBox', { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 0.8 })
         this.$gsap.from('.textBox__inner__content', { opacity: 0, x: 100 }, { delay: 0.5, opacity: 1, x: 0, duration: 0.8 })
+
+      
+
         // this.$gsap.to('.homeBtn, .textBox__inner__content, .textBox, .video', 0.5, { opacity: 1, y: 0 })
         // this.$gsap.to('.homeBtn', 0.5, { opacity: 1 })
         // setTimeout(() => {
@@ -183,11 +186,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.animateTitle h1{
+.animateTitle h1 {
     opacity: 0 !important;
     visibility: hidden !important;
 }
+
 .story {
     position: relative;
     display: block;

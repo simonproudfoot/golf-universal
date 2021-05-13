@@ -11,7 +11,7 @@
         </div>
     </div>
     <span v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="gradientOverlay" style="height: 200px; bottom: 190px"></span>
-    <div v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="interactive__inner">
+    <div v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="interactive__inner" :style="ready ? null : 'pointer-events: none'">
         <div class="card fadeUp text-left p-8" v-for="(section, i) in storys" :key="i" @click="openStory(i)" :style="{ backgroundImage: 'url(' + require('@/assets/img/'+section.thumb+'') + ')' }">
             <span @click="openStory(i)" class="text-5xl text-white">{{section.title}}</span>
             <button class="card__next"></button>
@@ -25,6 +25,7 @@
     <story class="storyContent" v-if="$store.state.view == 'storySelect' && $store.state.story !== null" :key="storyKey" :primaryColour="primaryColour" />
 </section>
 </template>
+
 <script>
 export default {
     name: 'interactive',
@@ -33,14 +34,18 @@ export default {
         return {
             storyKey: 0,
             story: 0,
+            ready: false,
         }
     },
     methods: {
         loadStories() {
-            this.$gsap.set(".fadeUp", { y: 0, x: -500, autoAlpha: 0 });
-            this.$gsap.to(".fadeUp", 0.7, { x: 0, autoAlpha: 1, stagger: 0.2, ease: 'back.out(1.7)'});
-            this.$gsap.from(".fadeUp span", 0.7, { x: -100, autoAlpha: 0, stagger: 0.2, delay: 0.3, ease: 'back.out(1.7)'});
-            this.$gsap.from(".gradientOverlay", { x: 0, autoAlpha: 0, delay: 0.5 });
+            this.$gsap.set(".fadeUp, .animateTitle", { y: 0, x: -500, autoAlpha: 0 });
+            this.$gsap.to(".fadeUp, .animateTitle", 0.7, { x: 0, autoAlpha: 1, stagger: 0.2, ease: 'back.out(1.7)' })
+            this.$gsap.from(".fadeUp span", 0.7, { x: 100, autoAlpha: 0, stagger: 0.2, delay: 1, ease: 'back.out(1.7)' })
+            this.$gsap.from(".gradientOverlay", { x: 0, autoAlpha: 0, delay: 0.5 })
+            setTimeout(() => {
+                this.ready = true
+            }, 2000);
         },
         openStory(storyId) {
             this.storyKey++
@@ -52,13 +57,20 @@ export default {
             this.$gsap.to(".fadeUp, .animateTitle", { y: 500, autoAlpha: 0, stagger: 0.1 });
         },
         '$store.state.interactiveKey': function () {
-            this.$gsap.set(".fadeUp", { y: 300, autoAlpha: 0 });
+            this.ready = false
+            this.$gsap.set(".fadeUp, .animateTitle", { x: 300, autoAlpha: 0 });
             setTimeout(() => {
                 this.loadStories()
             }, 700);
         }
     },
+    mounted() {
+        // this.$gsap.set(".fadeUp, .animateTitle, .animateTitle h1", { x: -500, autoAlpha: 0 });
+    },
     computed: {
+        active() {
+            return this.loadStories.isActive()
+        },
         storys() {
             return this.$store.getters[this.$nuxt.$route.name]
         },
@@ -82,7 +94,6 @@ export default {
 <style lang="scss">
 .interactive {
     display: block;
-
     height: 1920px !important;
     max-height: 1920px !important;
     width: 100%;
@@ -97,6 +108,7 @@ export default {
         display: block;
         height: calc(100% - 200px);
         overflow-y: auto;
+        overflow-x: hidden;
     }
 }
 
