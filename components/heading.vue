@@ -48,8 +48,6 @@ export default {
         this.$gsap.from('header', { autoAlpha: 0, y: -100, duration: 0.2});
         this.$gsap.from('header h1', { autoAlpha: 0, y: -100, stagger: 0.2, delay: 0.2 });
   
-
-
     },
     computed: {
         story() {
@@ -77,6 +75,9 @@ export default {
 <style lang="scss">
 #pat {
     margin-top: 800px;
+}
+.animateTitle h1{
+    opacity: 0;
 }
 
 .patternTop {}

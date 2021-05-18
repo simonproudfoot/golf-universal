@@ -11,7 +11,7 @@
         </div>
     </div>
     <span v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="gradientOverlay" style="height: 200px; bottom: 190px"></span>
-    <div v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="interactive__inner" :style="ready ? null : 'pointer-events: none'">
+    <div v-show="$store.state.view == 'storySelect' && $store.state.story == null" class="interactive__inner" :style="ready ? null : 'pointer-events: none'">
         <div class="card fadeUp text-left p-8" v-for="(section, i) in storys" :key="i" @click="openStory(i)" :style="{ backgroundImage: 'url(' + require('@/assets/img/'+section.thumb+'') + ')' }">
             <span @click="openStory(i)" class="text-5xl text-white">{{section.title}}</span>
             <button class="card__next"></button>
@@ -39,8 +39,11 @@ export default {
     },
     methods: {
         loadStories() {
-            this.$gsap.set(".fadeUp, .animateTitle", { y: 0, x: -500, autoAlpha: 0 });
-            this.$gsap.to(".fadeUp, .animateTitle", 0.7, { x: 0, autoAlpha: 1, stagger: 0.2, ease: 'back.out(1.7)' })
+            this.$gsap.set(".fadeUp, .animateTitle", {scale: 1.5, perspective: 900, rotationX: -90, y: 0, y: -500, autoAlpha: 0, transformStyle: "preserve-3d" });
+            this.$gsap.set(".interactive__inner", { perspective: 900 });
+
+
+            this.$gsap.to(".fadeUp, .animateTitle", 0.7, { scale: 1, rotationX: 0, y: 0, autoAlpha: 1, stagger: 0.2, ease: 'back.out(1.7)' })
             this.$gsap.from(".fadeUp span", 0.7, { x: 100, autoAlpha: 0, stagger: 0.2, delay: 1, ease: 'back.out(1.7)' })
             this.$gsap.from(".gradientOverlay", { x: 0, autoAlpha: 0, delay: 0.5 })
             setTimeout(() => {
@@ -58,7 +61,7 @@ export default {
         },
         '$store.state.interactiveKey': function () {
             this.ready = false
-            this.$gsap.set(".fadeUp, .animateTitle", { x: 300, autoAlpha: 0 });
+            this.$gsap.set(".fadeUp, .animateTitle", { y: 300, autoAlpha: 0 });
             setTimeout(() => {
                 this.loadStories()
             }, 700);

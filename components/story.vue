@@ -92,14 +92,15 @@ export default {
                 this.$gsap.set('.textBox__inner__content', { x: 100, opacity: 0, onCompleteParams: this.selected = i })
                 this.$gsap.to('.textBox__inner__content', { x: 0, opacity: 1, duration: 0.5 })
                 this.$nextTick(() => {
-                    this.$gsap.fromTo('.animateTitle h1', { opacity: 0, x: 600 }, { opacity: 1, x: 0, stagger: 0.1, ease: 'back.out(1.7)' })
+                    this.$gsap.fromTo('.animateTitle h1', { opacity: 0, x: 600, scale: 1.5, rotationY: 150 }, { scale: 1, opacity: 1, x: 0, stagger: 0.1, rotationY: 0, ease: 'back.out(1.7)' })
+                    //   this.$gsap.fromTo('.animateTitle h1', { opacity: 0, x: 600, scale: 1.5, rotationY: 150 }, {  opacity: 1, x: 0, stagger: 0.1, ease: 'back.out(1.7)' })
                 })
             } else {
                 this.$gsap.to('.textBox__inner__content', { duration: 0.5, opacity: 0, x: 100 })
                 this.$gsap.set('.textBox__inner__content', { opacity: 0, x: -100, onCompleteParams: this.selected = i })
                 this.$gsap.to('.textBox__inner__content', { duration: 0.5, x: 0, opacity: 1 })
                 this.$nextTick(() => {
-                    this.$gsap.fromTo('.animateTitle h1', { opacity: 0, x: -200 }, { opacity: 1, x: 0, stagger: 0.1, ease: 'back.out(1.7)' })
+                    this.$gsap.fromTo('.animateTitle h1', { opacity: 0, x: -200, scale: 1.5, rotationY: 50 }, { scale: 1, rotationY: 0, opacity: 1, x: 0, stagger: 0.1, ease: 'back.out(1.7)' })
                 })
             }
         },
@@ -117,13 +118,13 @@ export default {
         next() {
             this.selected++
             this.$nextTick(() => {
-                this.$gsap.fromTo('.animateTitle h1', { opacity: 0, x: 600 }, { opacity: 1, x: 0, stagger: 0.1, ease: 'back.out(1.7)' })
+                this.$gsap.fromTo('.animateTitle h1', { opacity: 0, x: 600, scale: 1.5, rotationY: 50 }, { scale: 1, opacity: 1, x: 0, stagger: 0.1, rotationY: 0, ease: 'back.out(1.7)' })
             })
         },
         prev() {
             this.selected--
             this.$nextTick(() => {
-                this.$gsap.fromTo('.animateTitle h1', { opacity: 0, x: -200 }, { opacity: 1, x: 0, stagger: 0.1, ease: 'back.out(1.7)' })
+                this.$gsap.fromTo('.animateTitle h1', { opacity: 0, x: -200, scale: 1.5, rotationY: 50 }, { scale: 1, opacity: 1, x: 0, stagger: 0.1, rotationY: 0, ease: 'back.out(1.7)' })
             })
         },
         reset() {
@@ -147,29 +148,23 @@ export default {
     },
     created() {
         this.selected = this.$store.state.story
-
+        this.$gsap.set('.animateTitle h1', { opacity: 1 })
+        //this.$gsap.set('.animateTitle', { opacity: 0 })
     },
     mounted() {
+  
         this.$nextTick(() => {
-            this.$gsap.set('.animateTitle', { opacity: 1 })
+        
+            this.$gsap.set(".animateTitle", { perspective: 900 });
+            this.$gsap.set(".animateTitle h1", { transformStyle: "preserve-3d", opacity: 0, x: -200, rotationY: -20, scale: 1.5 });
+            this.$gsap.to('.animateTitle h1', { scale: 1, rotationY: 0, opacity: 1, x: 0, stagger: 0.1, ease: 'back.out(1.7)' })
+            this.$gsap.set('.showTime', { opacity: 0, x: -60 });
+            this.$gsap.fromTo('.video', { opacity: 0, y: 150 }, { opacity: 1, y: 0, duration: 0.8 })
+            this.$gsap.fromTo('.textBox', { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 0.8 })
+            this.$gsap.from('.textBox__inner__content', { opacity: 0, x: 100 }, { delay: 0.5, opacity: 1, x: 0, duration: 0.8 })
+
         })
 
-        this.$gsap.fromTo('.animateTitle h1', { opacity: 0, x: -200 }, { opacity: 1, x: 0, stagger: 0.1, ease: 'back.out(1.7)' })
-        this.$gsap.set('.showTime', { opacity: 0, x: -60 });
-        this.$gsap.fromTo('.video', { opacity: 0, y: 150 }, { opacity: 1, y: 0, duration: 0.8 })
-        this.$gsap.fromTo('.textBox', { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 0.8 })
-        this.$gsap.from('.textBox__inner__content', { opacity: 0, x: 100 }, { delay: 0.5, opacity: 1, x: 0, duration: 0.8 })
-
-      
-
-        // this.$gsap.to('.homeBtn, .textBox__inner__content, .textBox, .video', 0.5, { opacity: 1, y: 0 })
-        // this.$gsap.to('.homeBtn', 0.5, { opacity: 1 })
-        // setTimeout(() => {
-        //     this.$gsap.to('.showTime', { opacity: 1, x: 0 });
-        // }, 5000)
-        // setTimeout(() => {
-        //     this.$gsap.to('.showTime', { opacity: 0, x: -16 });
-        // }, 60000)
     },
     computed: {
         currentStory() {
@@ -186,11 +181,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.animateTitle h1 {
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
-
 .story {
     position: relative;
     display: block;
