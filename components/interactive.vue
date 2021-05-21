@@ -21,6 +21,9 @@
                 <path class="b" d="M32.887,27.514,24.6,35.832a1.329,1.329,0,0,1-1.863-1.9l6.022-6.022H9.331a1.331,1.331,0,1,1,0-2.662H28.761L22.706,19.2a1.341,1.341,0,0,1,1.9-1.9l8.285,8.318A1.326,1.326,0,0,1,32.887,27.514Z" transform="translate(50.797 37.079)" />
             </svg>
         </div>
+         <div class="card" style="visibility: hidden; height: 100px">
+             <!-- fix shadow overlap -->
+         </div>
     </div>
     <story class="storyContent" v-if="$store.state.view == 'storySelect' && $store.state.story !== null" :key="storyKey" :primaryColour="primaryColour" />
 </section>
@@ -42,10 +45,10 @@ export default {
             this.$gsap.set(".fadeUp, .animateTitle", {scale: 1.5, perspective: 900, rotationX: -90, y: 0, y: -500, autoAlpha: 0, transformStyle: "preserve-3d" });
             this.$gsap.set(".interactive__inner", { perspective: 900 });
 
-
             this.$gsap.to(".fadeUp, .animateTitle", 0.7, { scale: 1, rotationX: 0, y: 0, autoAlpha: 1, stagger: 0.2, ease: 'back.out(1.7)' })
             this.$gsap.from(".fadeUp span", 0.7, { x: 100, autoAlpha: 0, stagger: 0.2, delay: 1, ease: 'back.out(1.7)' })
             this.$gsap.from(".gradientOverlay", { x: 0, autoAlpha: 0, delay: 0.5 })
+
             setTimeout(() => {
                 this.ready = true
             }, 2000);
