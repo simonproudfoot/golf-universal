@@ -91,64 +91,64 @@ export const state = () => ({
   },
   ],
   followTheOneGreen: [{
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/TomMorris.png',
     title: 'Tom Morris Sr.',
     heading: `<h1 class="text-9xl font-light">TOM</h1><h1 class="text-9xl font-bold">MORRIS SNR.</h1>`,
-    video: '',
+    video: 'TomMorriss.mp4',
     image: '',
     text: 'A legendary figure, Old Tom Morris as he was known to the golfing world and beyond, is the individual most responsible for shaping the game of golf still familiar to us today.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/HarryVardon.png',
     title: 'Harry Vardon',
     heading: `<h1 class="text-9xl font-light">HARRY</h1><h1 class="font-bold text-9xl">VARDON</h1>`,
-    video: '',
+    video: 'HarryVardon.mp4',
     image: '',
     text: 'The most celebrated member of The Great Triumvirate and the first player to win a record six Open Championship titles, Harry Vardon’s record has not yet been equaled or bettered.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/PeterThomson.png',
     title: 'Peter Thomson',
     heading: `<h1 class="text-9xl font-light">PETER</h1><h1 class="font-bold text-9xl">THOMSON</h1>`,
-    video: '',
+    video: 'PeterThomson.mp4',
     image: '',
     text: 'Peter Thomson was Open Champion five times; an impressive record made more notable by his hat-trick of wins in the mid-1950s.  A run of titles not yet matched in either the 20th or 21st centuries.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/ArnoldPalmer.png',
     title: 'Arnold Palmer',
     heading: `<h1 class="text-9xl font-light">ARNOLD</h1><h1 class="font-bold text-9xl">PALMER</h1>`,
-    video: '',
+    video: 'ArnoldPalmer.mp4',
     image: '',
     text: 'With charisma, skill and incredible strength, Arnold Palmer ‘the King’ won back-to-back in 1961 and 1962.  His ‘army’ of supporters and love of the Open reinvigorated the Championship, especially amongst his fellow Americans.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/JackNicklaus.png',
     title: 'Jack Nicklaus',
     heading: `<h1 class="text-9xl font-light">JACK</h1><h1 class="font-bold text-9xl">NICKLAUS</h1>`,
-    video: '',
+    video: 'JackNicklaus.mp4',
     image: '',
     text: 'Jack Nicklaus, holder of a record 18 Majors including two St Andrews Opens, was a legendary competitor. ‘The Golden Bear’ remained a dominant force in the game for many years.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/TigerWoods.png',
     title: 'Tiger Woods',
     heading: `<h1 class="text-9xl font-light">TIGER</h1><h1 class="text-9xl font-bold">WOODS</h1>`,
-    video: '',
+    video: 'TigerWoods.mp4',
     image: '',
     text: 'Three-time winner of the Claret Jug Tiger Woods is a global icon who transcends the game of golf.  Always ambitious, he is one of the most successful golfers of all time.'
   },
   {
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/TomWatson.png',
     title: 'Tom Watson',
     heading: `<h1 class="text-9xl font-light">TOM</h1><h1 class="text-9xl font-bold">WATSON</h1>`,
-    video: '',
+    video: 'TomWatson.mp4',
     image: '',
     text: 'Tom Watson won five Opens within nine years. He is the only Champion to have won so many Claret Jugs in so few years and only Harry Vardon won more titles, with six.'
   },
   ],
   eyeOfTheStorm: [{
-    thumb: 'test/testThumb.jpg',
+    thumb: 'thumbs/.png',
     title: 'Tom Kidd, 1873',
     heading: `<h1 class="text-7xl year">1873</h1><h1 class="text-9xl font-light">TOM</h1><h1 class="text-9xl font-bold">KIDD</h1>`,
     video: '',
