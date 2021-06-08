@@ -35,16 +35,13 @@ export default {
     '~/assets/scss/colors.scss',
     '~/assets/scss/type.scss',
     '~/assets/scss/main.scss'
-
+  
   ],
   gsap: {
     extraPlugins: {
       cssRule: true,
     }
   },
-
-  
-  publicPath: process.env.NODE_ENV === 'production' ? '/golf/'  : '/',
 
 
 
