@@ -35,7 +35,7 @@ export default {
     '~/assets/scss/colors.scss',
     '~/assets/scss/type.scss',
     '~/assets/scss/main.scss'
-  
+
   ],
   gsap: {
     extraPlugins: {
@@ -44,6 +44,8 @@ export default {
   },
 
   
+  publicPath: process.env.NODE_ENV === 'production' ? '/golf/'  : '/',
+
 
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
