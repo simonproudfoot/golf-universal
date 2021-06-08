@@ -4,6 +4,7 @@
     </div>
     <Nuxt />
     <v-idle style="display:none" :duration="300" :loop="true" @idle="goHome" />
+    <button @click="test" class="bg--dark"><h1 class="text-white">FORCE START SOCKET</h1></button>
 </div>
 </template>
 <script>
@@ -39,11 +40,9 @@ export default {
         },
     },
     mounted() {
-        
         this.$nuxt.$on('reset', (end) => {
             this.reset(end)
         })
-
         this.$nextTick(() => {
             this.$socket.onopen = (event) => {
                 

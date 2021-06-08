@@ -16,20 +16,26 @@ export default {
   },
 
   env: {
-    version: 'online' // local, online
+    version: 'local' // local, online
   },
 
   server: {
-    host: '0' // default: localhost
+    host: '0.0.0.0' // default: localhost
   },
   ssr: false, // Disable Server Side rendering
 
+
+  // publicPath: 'http://localhost:8888/golf-universal/dist-temp/',
+
+  // router: {
+  //   base: 'http://localhost:8888/golf-universal/dist-temp/'
+  // },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/scss/colors.scss',
     '~/assets/scss/type.scss',
     '~/assets/scss/main.scss'
-
+  
   ],
   gsap: {
     extraPlugins: {
@@ -38,12 +44,6 @@ export default {
   },
 
 
-  
-  babel:{
-    plugins: [
-      ['@babel/plugin-proposal-private-methods', { loose: true }]
-    ]
-  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~//plugins/websocket.js', '~/plugins/vidle.js',],
@@ -70,5 +70,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+    babel: {
+      plugins: [
+        // https://github.com/nuxt/nuxt.js/issues/9224#issuecomment-830577523
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+      ],
+    },
+  },
 }

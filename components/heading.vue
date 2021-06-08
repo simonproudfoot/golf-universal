@@ -5,16 +5,16 @@
         <path id="headPath" stroke-linecap="butt" fill="none" stroke-linejoin="miter" :stroke="primaryColour" stroke-width="50" stroke-miterlimit="10" class="st0" d="M792,1056.8l-228.9,351.46L.54,1127.75,112,212.12,595.53,631.84m-339,623.57L950,718.93M715.84,542.46l564,413.41m-215.73,246.8L812.56,1486m-168.9-201.36,387.39,473.86,47.12-562.67L330.53,830.43m655-486.83L473.94.89,437.87,495M8.29,1064.12,1196.6,188" />
     </svg>
     <div class="intro" :style="'backgroundColor:'+primaryColour">
-      
         <h1 v-if="titleA" class="text-9xl" >{{titleA}}</h1>
         <h1 class="text-9xl font-bold">{{titleB}}</h1>
     </div>
     <div class="sectionTitle">
-        <transition name="fadeY" mode="out-in">
-            <h1 v-if="$store.state.story == null && $store.state.view == 'storySelect'" class="text-9xl font-light animateTitle">Select a story to explore...</h1>
+        <!-- <transition name="fadeY" mode="out-in"> -->
+            <h1 v-if="$store.state.story == null && $store.state.view == 'storySelect'" class="text-9xl font-light animateTitle">Select a story</h1>
+            <h1 v-if="$store.state.story == null && $store.state.view == 'storySelect'" class="text-9xl font-light animateTitle">to explore...</h1>
             <div :class="routeName" v-if="$store.state.story !== null" v-html="story.heading" :key="tKey" class="font-normal animateTitle">
             </div>
-        </transition>
+        <!-- </transition> -->
     </div>
 </header>
 </template>
@@ -48,8 +48,6 @@ export default {
         this.$gsap.from('header', { autoAlpha: 0, y: -100, duration: 0.2});
         this.$gsap.from('header h1', { autoAlpha: 0, y: -100, stagger: 0.2, delay: 0.2 });
   
-
-
     },
     computed: {
         story() {
@@ -77,6 +75,9 @@ export default {
 <style lang="scss">
 #pat {
     margin-top: 800px;
+}
+.animateTitle h1{
+    opacity: 0;
 }
 
 .patternTop {}
