@@ -148,10 +148,10 @@ export const state = () => ({
   },
   ],
   eyeOfTheStorm: [{
-    thumb: 'thumbs/.png',
+    thumb: 'test/testThumb.jpg',
     title: 'Tom Kidd, 1873',
     heading: `<h1 class="text-7xl year">1873</h1><h1 class="text-9xl font-light">TOM</h1><h1 class="text-9xl font-bold">KIDD</h1>`,
-    video: '',
+    video: 'eye_of_the_storm/tom_kidd.mp4',
     image: '',
     text: 'After days of rain and with the course almost unplayable, St Andrews caddie Tom Kidd withstands the difficult conditions and holes his putt to win the Open.  The first player to win on debut.'
   },
@@ -159,7 +159,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Bob Ferguson, 1881',
     heading: `<h1 class="text-7xl year">1881</h1><h1 class="text-9xl font-light">BOB</h1><h1 class="text-9xl font-bold">FERGUSON</h1>`,
-    video: '',
+    video: 'eye_of_the_storm/bob_ferguson.mp4',
     image: '',
     text: 'Severe gales, rain, sleet and snow result in a high scoring Championship.  Despite the terrible conditions Bob Ferguson successfully defends his title, one of only eight players to finish out of a field of 22.'
   },
@@ -167,7 +167,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Willie Auchterlonie, 1893',
     heading: `<h1 class="text-7xl year">1893</h1><h1 class="text-9xl font-light">WILLIE</h1><h1 class="font-bold text-9xl">AUCHTERLONIE</h1>`,
-    video: '',
+    video: 'eye_of_the_storm/willie_auchterlonie.mp4',
     image: '',
     text: 'The first Open to be played over 72 holes is won by Willie Auchterlonie. His victory the result of determination to play on through the worst conditions he and his fellow competitors have ever experienced.'
   },
@@ -175,7 +175,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Reg Whitcombe, 1938',
     heading: `<h1 class="text-7xl year">1938</h1><h1 class="fobt-light text-9xl">REG</h1><h1 class="font-bold text-9xl">WHITCOMBE</h1>`,
-    video: '',
+    video: 'eye_of_the_storm/reg_whitcombe.mp4',
     image: '',
     text: 'Reg Whitcombe plays steadily through one of the worst storms to hit the Open.  One of only three finishers to score under 300, he wins the Claret Jug by two strokes.'
   },
@@ -183,23 +183,16 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Kel Nagle, 1960',
     heading: `<h1 class="text-7xl year">1960</h1><h1 class="text-9xl font-light">KEL</h1><h1 class="text-9xl font-bold">NAGLE</h1>`,
-    video: '',
+    video: 'eye_of_the_storm/kel_nagle.mp4',
     image: '',
     text: 'Play in the Centenary Open is suspended after torrential rain floods the course. When the Championship resumes the following day Australian Kel Nagle wins, defeating Arnold Palmer by one shot.'
   },
-  {
-    thumb: 'test/testThumb.jpg',
-    title: 'Kel Nagle, 1960',
-    heading: `<h1 class="text-7xl year">1960</h1><h1 class="text-9xl font-light">KEL</h1><h1 class="text-9xl font-bold">NAGLE</h1>`,
-    video: '',
-    image: '',
-    text: 'Play in the Centenary Open is suspended after torrential rain floods the course. When the Championship resumes the following day Australian Kel Nagle wins, defeating Arnold Palmer by one shot.'
-  },
+
   {
     thumb: 'test/testThumb.jpg',
     title: 'Arnold Palmer, 1961',
     heading: `<h1 class="text-7xl year">1961</h1><h1 class="text-9xl font-light">ARNOLD</h1><h1 class="font-bold text-9xl">PALMER</h1>`,
-    video: '',
+    video: 'eye_of_the_storm/arnold_palmer.mp4',
     image: '',
     text: 'Wind and rain cause damage and delay in the 1961 Open. Yet third round leader Arnold Palmer, playing his legendary attacking style, persists and wins by the closest of margins.'
   },
@@ -207,7 +200,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Greg Norman, 1986',
     heading: `<h1 class="text-7xl year">1986</h1><h1 class="text-9xl font-light">GREG</h1><h1 class="font-bold text-9xl">NORMAN</h1>`,
-    video: '',
+    video: 'eye_of_the_storm/greg_norman.mp4',
     image: '',
     text: 'Wild weather at Turnberry on the spectacular Ayrshire coast makes for a challenging Championship. Despite this, Greg Norman holds on to his second-round lead to win his only Claret Jug by five strokes.'
   },
@@ -216,14 +209,14 @@ export const state = () => ({
     title: 'Louis Oosthuizen, 2010',
     heading: `<h1 class="text-7xl year">2010</h1><h1 class="text-9xl font-light">LOUIS</h1><h1 class="font-bold text-9xl">OOSTHUIZEN</h1>`,
     video: '',
-    image: '',
+    video: 'eye_of_the_storm/louis.mp4',
     text: 'A calm and composed Louis Oosthuizen wins the 2010 Open by an amazing seven strokes. Amazing given the disruption caused to play by a combination of high winds and heavy rain.'
   },
   {
     thumb: 'test/testThumb.jpg',
     title: 'Zach Johnson, 2015',
     heading: `<h1 class="text-7xl year">2015</h1><h1 class="text-9xl font-light">ZACH</h1><h1 class="font-bold text-9xl">JOHNSON</h1>`,
-    video: '',
+    video: 'eye_of_the_storm/zach_johnson.mp4',
     image: '',
     text: 'Wind, rain, delays and play-offs result in only the second Open to finish on a Monday. Won by Zach Johnson after one of the tensest climaxes in the history of the Championship.'
   }
@@ -232,7 +225,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: '1879 – Jamie Anderson',
     heading: `<h1 class="text-7xl year">1879</h1><h1 class="text-9xl font-light">JAMIE</h1><h1 class="text-9xl font-bold">ANDERSON</h1>`,
-    video: '',
+    video: 'follow_the_one/jamie_anderson.mp4',
     image: '',
     text: 'Jamie Anderson becomes Champion first at Musselburgh, then Prestwick and finally St Andrews in consecutive years, 1877, 1878 and 1879.  A late change of date the following year denying him the chance of winning a fourth.'
   },
@@ -240,7 +233,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: '1937 – Henry Cotton',
     heading: `<h1 class="text-7xl year">1937</h1><h1 class="text-9xl font-light">HENRY</h1><h1 class="font-bold text-9xl">COTTON</h1>`,
-    video: '',
+    video: 'follow_the_one/henry_cotton.mp4',
     image: '',
     text: 'Despite the heavy rain at Carnoustie, which almost floods the course, Henry Cotton needs only 26 putts to complete his fourth round and win his second Open title; the finest performance of his career.'
   },
@@ -248,7 +241,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: '1951 – Max Faulkner',
     heading: `<h1 class="text-7xl year">1951</h1><h1 class="text-9xl font-light">MAX</h1><h1 class="font-bold text-9xl">FAULKNER</h1>`,
-    video: '',
+    video: 'follow_the_one/max_faulkner.mp4',
     image: '',
     text: 'One time winner Max Faulkner, a flamboyant figure who often used unconventional clubs, wins in 1951 with a putter made from driftwood and a billiard cue, fulfilling his own belief he would be Champion Golfer.'
   },
@@ -256,7 +249,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: '1957 – Bobby Locke',
     heading: `<h1 class="text-7xl year">1957</h1><h1 class="text-9xl font-light">BOBBY</h1><h1 class="font-bold text-9xl">LOCKE</h1>`,
-    video: '',
+    video: 'follow_the_one/bobby_locke.mp4',
     image: '',
     text: 'The final stages of the 1957 Open are the first to be broadcast live and viewers spot Bobby Locke fail to replace his marker correctly on the 18th green, but the result stands and he wins his fourth Championship.'
   },
@@ -264,7 +257,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: '1967 – Roberto de Vicenzo',
     heading: `<h1 class="text-7xl year">1967</h1><h1 class="text-9xl font-light">ROBERTO</h1><h1 class="font-bold text-9xl">DE VICENZO</h1>`,
-    video: '',
+    video: 'follow_the_one/roberto_de_vicenzo.mp4',
     image: '',
     text: 'Argentinian Roberto de Vicenzo is the only South American to lift the Claret Jug.  Successful in 1967, ten years after his first Open, at 44 he is the second oldest Champion after Old Tom Morris.'
   },
@@ -272,7 +265,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: '1985 – Sandy Lyle',
     heading: `<h1 class="text-7xl year">1985</h1><h1 class="text-9xl font-light">SANDY</h1><h1 class="font-bold text-9xl">LYLE</h1>`,
-    video: '',
+    video: 'follow_the_one/sandy_lyle.mp4',
     image: '',
     text: 'Open Champion in 1985, Sandy Lyle is the first British winner in 16 years. Masters Champion in 1988, Lyle has played in 42 consecutive Opens from 1977 to 2018, a record beaten only by Gary Player.'
   },
@@ -280,7 +273,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: '2013 – Phil Mickelson',
     heading: `<h1 class="text-7xl year">2013</h1><h1 class="text-9xl font-light">PHIL</h1><h1 class="text-9xl font-bold">MICKELSON</h1>`,
-    video: '',
+    video: 'follow_the_one/phil_mickelson.mp4',
     image: '',
     text: '2013 Champion Phil Mickelson, the second left hander to win, shares the record for competing in the most Opens, 19, before victory.  His final round 66 is the lowest by a Champion at Muirfield.'
   }],
@@ -294,7 +287,7 @@ export const state = () => ({
       <h1 class="text-7xl year">v.</h1>
       <h1 class="text-9xl font-light">TOM</h1>
       <h1 class="text-9xl font-bold">MORRIS SR</h1>`,
-      video: '',
+      video: 'duels/willie_park_sr_v_tom_morris_sr.mp4',
       image: '',
       text: ''
     },
@@ -320,7 +313,7 @@ export const state = () => ({
       <h1 class="text-7xl year">v.</h1>
       <h1 class="text-9xl uppercase font-light">Jack</h1>
       <h1 class="text-9xl uppercase font-bold">Nicklaus</h1>`,
-      video: '',
+      video: 'duels/tom_watson_v_jack_nicklaus.mp4',
       image: '',
       text: 'The legendary ‘Duel in the Sun’ sees Watson and Nicklaus match each other stroke for stroke. Victory rests in Watson’s hands as he sinks a two-foot putt for the Championship.'
     },
@@ -333,7 +326,7 @@ export const state = () => ({
       <h1 class="text-7xl year">v.</h1>
       <h1 class="text-9xl uppercase font-light">Jesper</h1>
       <h1 class="text-9xl uppercase font-bold">Parnevik</h1>`,
-      video: '',
+      video: 'duels/nick_price_v_jesper_parnevik.mp4',
       image: '',
       text: 'Twice runner-up, Nick Price becomes Champion Golfer of the Year despite a strong challenge from Jesper Parnevik. The pivotal moment comes at the 17th when Price sinks a stunning 50-foot putt for eagle.'
     },
@@ -346,7 +339,7 @@ export const state = () => ({
       <h1 class="text-7xl year">v.</h1>
       <h1 class="text-9xl uppercase font-light">Phil</h1>
       <h1 class="text-9xl uppercase font-bold">Michelson</h1>`,
-      video: '',
+      video: 'duels/henrik_stenson_v_phil_michelson.mp4',
       image: '',
       text: 'Spectators witness an epic final round.  Henrik Stenson and Phil Mickelson are locked in battle far ahead of the pack.  Ten birdies secure victory for Stenson, the first Swedish Champion.'
     }
@@ -362,7 +355,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Walter Hagen, 1922',
     heading: `<h1 class="text-7xl year">1922</h1><h1 class="text-9xl uppercase font-light">Walter</h1><h1 class="uppercase font-bold text-9xl">Hagen</h1>`,
-    video: '',
+    video: 'making_history/walter_hagen.mp4',
     image: '',
     text: 'Golf’s earliest showman, Walter Hagen is the first native-born American to take the Claret Jug home across the Atlantic. He would go on to win a further three Open Championships.'
   },
@@ -370,7 +363,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Bobby Jones, 1930',
     heading: `<h1 class="text-7xl year">1930</h1><h1 class="text-9xl uppercase font-light">Bobby</h1><h1 class="uppercase text-9xl font-bold">Jones</h1>`,
-    video: '',
+    video: 'making_history/bobby_jones.mp4',
     image: '',
     text: '1930 Amateur Champion and the only amateur winner of The Open in the 20th century, Bobby Jones wins for the third time.  He later completed the Grand Slam by winning the US Open and Amateur.'
   },
@@ -378,7 +371,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Henry Cotton, 1934',
     heading: `<h1 class="text-7xl year">1934</h1><h1 class="text-9xl uppercase font-light">Henry</h1><h1 class="uppercase text-9xl font-bold">Cotton</h1>`,
-    video: '',
+    video: 'making_history/henry_cotton.mp4',
     image: '',
     text: 'The first British winner since 1923 Henry Cotton ends years of American dominance. Scoring a course record 65, he also had the lowest 36 and 54 holes in the Championship.'
   },
@@ -386,7 +379,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Fred Daly, 1947',
     heading: `<h1 class="text-7xl year">1947</h1><h1 class="text-9xl uppercase font-light">Fred</h1><h1 class="uppercase text-9xl font-bold">Daly</h1>`,
-    video: '',
+    video: 'making_history/fred_daly.mp4',
     image: '',
     text: 'To loud applause from an enthusiastic crowd Fred Daly birdies the last for a score of 293 and the Championship, making history as the first Irish winner of The Open.'
   },
@@ -394,7 +387,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Bob Charles, 1963',
     heading: `<h1 class="text-7xl year">1963</h1><h1 class="text-9xl uppercase font-light">Bob</h1><h1 class="uppercase text-9xl font-bold">Charles</h1>`,
-    video: '',
+    video: 'making_history/bob_charles.mp4',
     image: '',
     text: 'In a tight contest Bob Charles is taken into a play-off by Phil Rodgers. Charles wins convincingly becoming the first left-hander, and so far, the only New Zealander, to be Champion Golfer.'
   },
@@ -402,7 +395,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Gary Player, 1974',
     heading: `<h1 class="text-7xl year">1974</h1><h1 class="text-9xl uppercase font-light">Gary</h1><h1 class="uppercase text-9xl font-bold">Player</h1>`,
-    video: '',
+    video: 'making_history/gary_player.mp4',
     image: '',
     text: 'Forced to putt left-handed inches from the clubhouse wall Gary Player secures an historic victory at Royal Lytham & St Annes, the third of three wins in three separate decades.'
   },
@@ -410,7 +403,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Sir Nick Faldo, 1990',
     heading: `<h1 class="text-7xl year">1990</h1><h1 class="text-9xl font-light uppercase">sir</h1><h1 class="text-9xl font-light uppercase">Nick</h1><h1 class="uppercase font-bold text-9xl">Faldo</h1>`,
-    video: '',
+    video: 'making_history/sir_nick_faldo.mp4',
     image: '',
     text: 'Forced to putt left-handed inches from the clubhouse wall Gary Player secures an historic victory at Royal Lytham & St Annes, the third of three wins in three separate decades.'
   },
@@ -418,7 +411,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Brandon Grace, 2017',
     heading: `<h1 class="text-7xl year">2017</h1><h1 class="text-9xl uppercase font-light">Brandon</h1><h1 class="font-bold uppercase text-9xl">Grace</h1>`,
-    video: '',
+    video: 'making_history/brandon_grace.mp4',
     image: '',
     text: 'On the third day at Royal Birkdale, South African Branden Grace makes eight birdies and posts a 62, the lowest round in any Major, including the 146 years of the Open.'
   },
@@ -427,14 +420,14 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Bob Martin, 1876',
     heading: `<h1 class="text-7xl year">1876</h1><h1 class="font-light text-9xl uppercase">Bob</h1><h1 class="font-bold uppercase text-9xl">Martin</h1>`,
-    video: '',
+    video: 'against_all_odds/bob_martin.mp4',
     image: '',
     text: 'For the first time a tie is declared when Davie Strath and Bob Martin finish with identical scores.  Strath refuses to take part in the play-off Bob Martin walks the course and is declared Champion.'
   }, {
     thumb: 'test/testThumb.jpg',
     title: 'Tommy Armour, 1931',
     heading: `<h1 class="text-7xl year">1931</h1><h1 class="text-9xl uppercase font-light">Tommy</h1><h1 class="font-bold uppercase text-9xl">Armour</h1>`,
-    video: '',
+    video: 'against_all_odds/tommy_armour.mp4',
     image: '',
     text: 'Born in Edinburgh Tommy Armour, later an American citizen, wins the day despite having lost the sight in one eye in WW1.  The ‘Silver Scot’ defeats Argentinan Jose Jurado by one stroke.'
   }
@@ -442,14 +435,14 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Ben Hogan, 1953',
     heading: `<h1 class="text-7xl year">1953</h1><h1 class="text-9xl uppercase font-light">Ben</h1><h1 class="font-bold uppercase text-9xl">Hogan</h1>`,
-    video: '',
+    video: 'against_all_odds/ben_hogan.mp4',
     image: '',
     text: 'Battling chills, flu and car crash injuries Ben Hogan is followed by huge galleries in his only Open appearance.  Finishing on 282 his win at Carnoustie is his third Major in one year.',
   }, {
     thumb: 'test/testThumb.jpg',
     title: 'Paul Lawrie, 1999',
     heading: `<h1 class="text-7xl year">1999</h1><h1 class="text-9xl uppercase font-light">Paul</h1><h1 class="font-bold uppercase text-9xl">Lawrie</h1>`,
-    video: '',
+    video: 'against_all_odds/paul_lawrie.mp4',
     image: '',
     text: 'Jean Van de Velde’s chance of an outright win finishes in the Barry Burn. Scot Paul Lawrie, a qualifier who started the day 10 shots adrift, wins the play-off by three shots.',
   }
@@ -457,7 +450,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Ben Curtis, 2003',
     heading: `<h1 class="text-7xl year">2003</h1><h1 class="text-9xl uppercase font-light">Ben</h1><h1 class="uppercase font-bold text-9xl">Curtis</h1>`,
-    video: '',
+    video: 'against_all_odds/ben_curtis.mp4',
     image: '',
     text: 'Ben Curtis, ranked 396th, wins on his Open debut. Following good advice from his caddie he sinks six birdies in 11 holes in the final round causing one of the biggest upsets in Open history.'
   }
@@ -465,7 +458,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Padraig Harrington, 2007',
     heading: `<h1 class="text-7xl year">2007</h1><h1 class="text-9xl uppercase font-light">Padraig</h1><h1 class="font-bold uppercase text-9xl">Harrington</h1>`,
-    video: '',
+    video: 'against_all_odds/padraig_harrington.mp4',
     image: '',
     text: 'Having twice put his ball into Carnoustie’s notorious Barry Burn, at the last Padraig Harrington still manages to catch Sergio Garcia and defeat him in the play-off by one shot.'
   }
@@ -473,7 +466,7 @@ export const state = () => ({
     thumb: 'test/testThumb.jpg',
     title: 'Ernie Els, 2012',
     heading: `<h1 class="text-7xl year">2012</h1><h1 class="text-9xl uppercase font-light">Ernie</h1><h1 class="font-bold uppercase text-9xl">Els</h1>`,
-    video: '',
+    video: 'against_all_odds/ernie_els.mp4',
     image: '',
     text: 'Having never led in any round of the 2012 Open, Ernie Els becomes Champion Golfer ten years after winning his first Claret Jug, following a disastrous collapse by Adam Scott in the final four holes.'
   }
@@ -510,7 +503,7 @@ export const getters = {
 
 export const mutations = {
 
-  setSocket(state, val){
+  setSocket(state, val) {
     state.socket = val
   },
 
@@ -519,7 +512,7 @@ export const mutations = {
     setTimeout(() => {
       state.view = 'main'
       state.story = null
-    
+
     }, 1000);
 
   },
