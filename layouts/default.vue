@@ -4,9 +4,12 @@
     </div>
     <Nuxt />
     <v-idle style="display:none" :duration="300" :loop="true" @idle="goHome" />
-    <button @click="test" class="bg--dark"><h1 class="text-white">FORCE START SOCKET</h1></button>
+    <button @click="test" class="bg--dark">
+        <h1 class="text-white">FORCE START SOCKET</h1>
+    </button>
 </div>
 </template>
+
 <script>
 export default {
     data: function () {
@@ -22,7 +25,7 @@ export default {
             this.$socket.send('start');
         },
         goHome() {
-            this.$store.commit('resetAll')       
+            this.$store.commit('resetAll')
         },
         reset(end) {
             this.$store.commit('resetAll')
@@ -40,19 +43,20 @@ export default {
         },
     },
     mounted() {
+        this.$socket.send('start');
         this.$nuxt.$on('reset', (end) => {
             this.reset(end)
         })
         this.$nextTick(() => {
+
             this.$socket.onopen = (event) => {
-                
+
                 console.log('connected to server:', event)
                 this.$socket.send('start');
             }
 
             this.$socket.onmessage = (event) => {
                 this.$store.commit('setTime', Number(event.data))
-           
 
                 if (event.data === 'reset') {
                     this.reset()

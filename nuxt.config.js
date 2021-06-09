@@ -1,4 +1,17 @@
 export default {
+
+  env: {
+  //  productionMode: 'apache'
+  },
+
+  router: {
+
+    // uncomment if hosting on apache server 
+    // base: '/golf' //
+  },
+
+
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Totems',
@@ -21,6 +34,7 @@ export default {
 
   server: {
     host: '0.0.0.0' // default: localhost
+    // fine for local and onsite
   },
   ssr: false, // Disable Server Side rendering
 
@@ -35,15 +49,13 @@ export default {
     '~/assets/scss/colors.scss',
     '~/assets/scss/type.scss',
     '~/assets/scss/main.scss'
-  
+
   ],
   gsap: {
     extraPlugins: {
       cssRule: true,
     }
   },
-
-
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~//plugins/websocket.js', '~/plugins/vidle.js',],
@@ -70,6 +82,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+
+
+
     babel: {
       plugins: [
         // https://github.com/nuxt/nuxt.js/issues/9224#issuecomment-830577523
