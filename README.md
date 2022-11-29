@@ -1,4 +1,4 @@
-# websocket-test
+# OLD VERSION. DO NOT USE FOR PRODUCTION!
 
 ## Build Setup
 
