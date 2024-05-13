@@ -155,14 +155,14 @@ export default {
     mounted() {
   
         this.$nextTick(() => {
-        
+            this.selected = 0
             this.$gsap.set(".animateTitle", { perspective: 900 });
             this.$gsap.set(".animateTitle h1", { transformStyle: "preserve-3d", opacity: 0, x: -200, rotationY: -20, scale: 1.5 });
             this.$gsap.to('.animateTitle h1', { scale: 1, rotationY: 0, opacity: 1, x: 0, stagger: 0.1, ease: 'back.out(1.7)' })
             this.$gsap.set('.showTime', { opacity: 0, x: -60 });
             this.$gsap.fromTo('.video', { opacity: 0, y: 150 }, { opacity: 1, y: 0, duration: 0.8 })
             this.$gsap.fromTo('.textBox', { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 0.8 })
-            this.$gsap.from('.textBox__inner__content', { opacity: 0, x: 100 }, { delay: 0.5, opacity: 1, x: 0, duration: 0.8 })
+            this.$gsap.fromTo('.textBox__inner__content', { opacity: 0, x: 100 }, { delay: 0.5, opacity: 1, x: 0, duration: 0.8 })
 
         })
 
