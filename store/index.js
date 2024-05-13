@@ -459,7 +459,7 @@ export const state = () => ({
       text: ''
     },
     {
-      thumb: 'thumbs/special/Lilia-Vu_2023.png',
+      thumb: 'thumbs/special/Lilia-Vu_2023_v2.png',
       title: 'Lilia Vu, 2023',
       heading: ``,
       video: 'special/Totem_Lilia_Vu.mp4',

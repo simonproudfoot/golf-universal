@@ -1,7 +1,7 @@
 <template>
 <section class="interactive" 
         :class="{
-            'paddTop': isSpecial && !$store.state.story,
+            'paddTop': isSpecial && $store.state.story == null,
             'fullHeight': isSpecial && $store.state.story !== null
          }">
     <div v-if="$store.state.view == 'main'" class="interactive__inner">

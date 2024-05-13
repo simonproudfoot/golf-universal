@@ -1,5 +1,5 @@
 <template>
-<div  :class="!isSpecial ? 'story' : 'story-fullscreen'" >
+<div :class="!isSpecial ? 'story' : 'story-fullscreen'" >
     
     <div v-if="visible.image" class="video video--image" :style="{ backgroundImage: 'url(' + require('@/assets/img/'+visible.image+'') + ')' }" :key="selected">
         <span class="gradientOverlay" style="height:915px"></span>
@@ -155,7 +155,7 @@ export default {
     mounted() {
   
         this.$nextTick(() => {
-            this.selected = 0
+        
             this.$gsap.set(".animateTitle", { perspective: 900 });
             this.$gsap.set(".animateTitle h1", { transformStyle: "preserve-3d", opacity: 0, x: -200, rotationY: -20, scale: 1.5 });
             this.$gsap.to('.animateTitle h1', { scale: 1, rotationY: 0, opacity: 1, x: 0, stagger: 0.1, ease: 'back.out(1.7)' })
