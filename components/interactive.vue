@@ -13,7 +13,7 @@
     <span v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="gradientOverlay" style="height: 200px; bottom: 95px"></span>
     <div v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="interactive__inner" :style="ready ? null : 'pointer-events: none'">
         <div class="card fadeUp text-left p-8" v-for="(section, i) in storys" :key="i" @click="openStory(i)" :style="{ backgroundImage: 'url(' + require('@/assets/img/'+section.thumb+'') + ')' }">
-            <span class="text-5xl text-white">{{section.title}}</span>
+            <span class="text-5xl text-white" v-html="section.title"></span>
             <button class="card__next"></button>
             <svg class="card__next" xmlns="http://www.w3.org/2000/svg" width="103" height="90.305" viewBox="0 0 103 90.305">
                 <defs></defs>

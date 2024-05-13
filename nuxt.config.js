@@ -1,13 +1,13 @@
 export default {
 
   env: {
-  //  productionMode: 'apache'
+    //  productionMode: 'apache'
   },
 
   router: {
 
     // uncomment if hosting on apache server 
-   // base: '/golf' //
+    // base: '/golf' //
   },
 
 
@@ -57,7 +57,7 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~//plugins/websocket.js', '~/plugins/vidle.js',],
+  plugins: ['~//plugins/websocket.js', '~/plugins/vidle.js', { src: '~/plugins/mixins.js', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

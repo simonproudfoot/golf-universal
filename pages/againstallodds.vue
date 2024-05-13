@@ -1,18 +1,19 @@
 <template>
+<!--This is the temporary replacement for against all odds -->
 <div class="home">
     <main class="videoMode" v-if="$store.getters.videoMode">
-        <video  v-gsap.fromTo="[{autoAlpha: 0}, {autoAlpha: 1, delay: 1, duration: 1}]" class="video" autoplay muted>
+        <video v-gsap.fromTo="[{autoAlpha: 0}, {autoAlpha: 1, delay: 1, duration: 1}]" class="video" autoplay muted>
             <source :src="require('@/assets/video/holdingVideos/'+videoUrl)" type="video/mp4">
         </video>
     </main>
     <main v-else>
-        <span v-show="$store.state.view == 'main'" class="gradientOverlay" style="height: 1200px"></span>
-        <heading class="mainHead" :titleA="'AGAINST'" :titleB="'ALL ODDS'" :primaryColour="pColor"></heading>
-        <video ref="attractor" v-if="$store.state.view == 'main'" autoplay muted loop class="video" style="position: absolute; top: 450px;">
+        <!-- <span v-show="$store.state.view == 'main'" class="gradientOverlay" style="height: 1200px"></span> -->
+        <heading class="mainHead opacity-0" :titleA="'AGAINST'" :titleB="'ALL ODDS'" :primaryColour="pColor"></heading>
+        <video ref="attractor" v-if="$store.state.view == 'main'" autoplay muted loop class="video" style="position: absolute; top: 0;">
             <source :src="require('@/assets/video/'+attractorVideo)" type="video/mp4">
         </video>
         <interactive :primaryColour="pColor" />
-        <bottom :primaryColour="pColor" />
+        <!-- <bottom :primaryColour="pColor" /> -->
     </main>
 </div>
 </template>

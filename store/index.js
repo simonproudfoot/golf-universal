@@ -313,7 +313,7 @@ export const state = () => ({
       <h1 class="text-7xl year">v.</h1>
       <h1 class="text-9xl uppercase font-light">Jack</h1>
       <h1 class="text-9xl uppercase font-bold">Nicklaus</h1>`,
-      video: 'duels/1977_Great_moment.mp4', 
+      video: 'duels/1977_Great_moment.mp4',
       image: '',
       text: 'The legendary ‘Duel in the Sun’ sees Watson and Nicklaus match each other stroke for stroke. Victory rests in Watson’s hands as he sinks a two-foot putt for the Championship.'
     },
@@ -416,60 +416,56 @@ export const state = () => ({
     text: 'On the third day at Royal Birkdale, South African Branden Grace makes eight birdies and posts a 62, the lowest round in any Major, including the 146 years of The Open.'
   },
   ],
-  againstAllOdds: [{
-    thumb: 'thumbs/against_all_odds/bob_martin.png',
-    title: 'Bob Martin, 1876',
-    heading: `<h1 class="text-7xl year">1876</h1><h1 class="font-light text-9xl uppercase">Bob</h1><h1 class="font-bold uppercase text-9xl">Martin</h1>`,
-    video: 'against_all_odds/bob_martin.mp4',
-    image: '',
-    text: 'For the first time a tie is declared when Davie Strath and Bob Martin finish with identical scores.  Strath refuses to take part in the play-off Bob Martin walks the course and is declared Champion.'
-  }, {
-    thumb: 'thumbs/against_all_odds/tommy_armour.png',
-    title: 'Tommy Armour, 1931',
-    heading: `<h1 class="text-7xl year">1931</h1><h1 class="text-9xl uppercase font-light">Tommy</h1><h1 class="font-bold uppercase text-9xl">Armour</h1>`,
-    video: 'against_all_odds/tommy_armour.mp4',
-    image: '',
-    text: 'Born in Edinburgh Tommy Armour, later an American citizen, wins the day despite having lost the sight in one eye in WW1.  The ‘Silver Scot’ defeats Argentinan Jose Jurado by one stroke.'
-  }
-    , {
-    thumb: 'thumbs/against_all_odds/ben_hogan.png',
-    title: 'Ben Hogan, 1953',
-    heading: `<h1 class="text-7xl year">1953</h1><h1 class="text-9xl uppercase font-light">Ben</h1><h1 class="font-bold uppercase text-9xl">Hogan</h1>`,
-    video: 'against_all_odds/ben_hogan.mp4',
-    image: '',
-    text: 'Battling chills, flu and car crash injuries Ben Hogan is followed by huge galleries in his only Open appearance.  Finishing on 282 his win at Carnoustie is his third Major in one year.',
-  }, {
-    thumb: 'thumbs/against_all_odds/paul_lawrie.png',
-    title: 'Paul Lawrie, 1999',
-    heading: `<h1 class="text-7xl year">1999</h1><h1 class="text-9xl uppercase font-light">Paul</h1><h1 class="font-bold uppercase text-9xl">Lawrie</h1>`,
-    video: 'against_all_odds/paul_lawrie.mp4',
-    image: '',
-    text: 'Jean Van de Velde’s chance of an outright win finishes in the Barry Burn. Scot Paul Lawrie, a qualifier who started the day 10 shots adrift, wins the play-off by three shots.',
-  }
-    , {
-    thumb: 'thumbs/against_all_odds/ben_curtis.png',
-    title: 'Ben Curtis, 2003',
-    heading: `<h1 class="text-7xl year">2003</h1><h1 class="text-9xl uppercase font-light">Ben</h1><h1 class="uppercase font-bold text-9xl">Curtis</h1>`,
-    video: 'against_all_odds/ben_curtis.mp4',
-    image: '',
-    text: 'Ben Curtis, ranked 396th, wins on his Open debut. Following good advice from his caddie he sinks six birdies in 11 holes in the final round causing one of the biggest upsets in Open history.'
-  }
-    , {
-    thumb: 'thumbs/against_all_odds/padraig_harrington.png',
-    title: 'Padraig Harrington, 2007',
-    heading: `<h1 class="text-7xl year">2007</h1><h1 class="text-9xl uppercase font-light">Padraig</h1><h1 class="font-bold uppercase text-9xl">Harrington</h1>`,
-    video: 'against_all_odds/padraig_harrington.mp4',
-    image: '',
-    text: 'Having twice put his ball into Carnoustie’s notorious Barry Burn, at the last Padraig Harrington still manages to catch Sergio Garcia and defeat him in the play-off by one shot.'
-  }
-    , {
-    thumb: 'thumbs/against_all_odds/ernie_els.png',
-    title: 'Ernie Els, 2012',
-    heading: `<h1 class="text-7xl year">2012</h1><h1 class="text-9xl uppercase font-light">Ernie</h1><h1 class="font-bold uppercase text-9xl">Els</h1>`,
-    video: 'against_all_odds/ernie_els.mp4',
-    image: '',
-    text: 'Having never led in any round of the 2012 Open, Ernie Els becomes Champion Golfer ten years after winning his first Claret Jug, following a disastrous collapse by Adam Scott in the final four holes.'
-  }
+  // AGAINST ALL ODDS HAS BEEN CHANGED FOR SPECIAL TOTEM. CHANGE BACK TO PRE MAY 13th 2024 for original data (git)
+  againstAllOdds: [
+    {
+      thumb: 'thumbs/special/Laura_Davies_1986.png',
+      title: 'Laura Davies, 1986',
+      heading: ``,
+      video: 'special/Totem_Laura_Davies.mp4',
+      image: '',
+      text: ''
+    },
+    {
+      thumb: 'thumbs/special/Yani_Tseng_2010_2011.png',
+      title: 'Yani Tseng,<br/>2010 and 2011',
+      heading: ``,
+      video: 'special/Totem_Yani_Tseng.mp4',
+      image: '',
+      text: ''
+    },
+    {
+      thumb: 'thumbs/special/Hinako_Shibuno_2019.png',
+      title: 'Hinako Shibuno, <br/>2019',
+      heading: ``,
+      video: 'special/Totem_Hinako_Shibuno.mp4',
+      image: '',
+      text: ''
+    },
+    {
+      thumb: 'thumbs/special/Sophia_Popov_2020.png',
+      title: 'Sophia Popov, 2020',
+      heading: ``,
+      video: 'special/Totem_Sophia_Popov.mp4',
+      image: '',
+      text: ''
+    },
+    {
+      thumb: 'thumbs/special/Ashleigh_Buhai_2022.png',
+      title: 'Ashleigh Buhai, 2022',
+      heading: ``,
+      video: 'special/Totem_Ashleigh_Buhai.mp4',
+      image: '',
+      text: ''
+    },
+    {
+      thumb: 'thumbs/special/Lilia-Vu_2023.png',
+      title: 'Lilia Vu, 2023',
+      heading: ``,
+      video: 'special/Totem_Lilia_Vu.mp4',
+      image: '',
+      text: ''
+    },
   ]
 })
 

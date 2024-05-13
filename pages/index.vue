@@ -1,8 +1,8 @@
 <template>
 <div>
-<router-link class="links" v-for="r in routes" :key="r.path" :to="r.path">
-    {{ r.name }}
-</router-link>
+    <router-link class="links" v-for="r in routes" :key="r.path" :to="r.path">
+        {{ r.name }}
+    </router-link>
 </div>
 </template>
 
@@ -15,10 +15,11 @@ export default {
 </script>
 
 <style>
-nav{
+nav {
     margin-top: 2000px;
 }
-.links{
+
+.links {
     color: red;
     margin-bottom: 1em;
     display: block;

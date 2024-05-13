@@ -27,7 +27,7 @@
             </radialProgressBar>
         </div>
     </div>
-    <div class="textBoxShadow">
+    <div v-if="visible.text" class="textBoxShadow">
         <div class="textBox">
             <div class="textBox__inner">
                 <p class="textBox__inner__content" v-html="visible.text"></p>
