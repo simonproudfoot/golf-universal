@@ -1,10 +1,10 @@
 <template>
-<div class="story">
+<div  :class="!isSpecial ? 'story' : 'story-fullscreen'" >
     
     <div v-if="visible.image" class="video video--image" :style="{ backgroundImage: 'url(' + require('@/assets/img/'+visible.image+'') + ')' }" :key="selected">
         <span class="gradientOverlay" style="height:915px"></span>
     </div>
-    <div v-if="visible.video" class="video" :key="selected">
+    <div v-if="visible.video" :class="!isSpecial ? 'video' : 'video-fullscreen'" :key="selected">
         <video autoplay>
             <source :src="require('@/assets/video/'+visible.video)" type="video/mp4">
         </video>
@@ -27,10 +27,10 @@
             </radialProgressBar>
         </div>
     </div>
-    <div v-if="visible.text" class="textBoxShadow">
+    <div v-if="visible.text"  class="textBoxShadow">
         <div class="textBox">
             <div class="textBox__inner">
-                <p class="textBox__inner__content" v-html="visible.text"></p>
+                <p class="textBox__inner__content"  v-html="visible.text"></p>
             </div>
             <div class="textBox__navigation">
                 <button :class="selected != 0 ? null : 'textBox__navigation__nav textBox__navigation__nav--inactive'" class="textBox__navigation__nav textBox__navigation__nav--prev" @click="slidePrev()">
@@ -182,6 +182,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.story-fullscreen{
+    height: 3840px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .story {
     position: relative;
     display: block;
@@ -231,6 +238,7 @@ export default {
     left: 73px;
     height: 42px;
     width: 42px;
+    z-index: 100;
 }
 
 .video {

@@ -1,5 +1,9 @@
 <template>
-<section class="interactive">
+<section class="interactive" 
+        :class="{
+            'paddTop': isSpecial && !$store.state.story,
+            'fullHeight': isSpecial && $store.state.story !== null
+         }">
     <div v-if="$store.state.view == 'main'" class="interactive__inner">
         <div class="buttonShape" v-gsap.from="{y: 50 ,duration: 1, autoAlpha: 0}" @click="view = 'storySelect'"><span>Tap to start</span>
             <div class="arrow">
@@ -21,9 +25,9 @@
                 <path class="b" d="M32.887,27.514,24.6,35.832a1.329,1.329,0,0,1-1.863-1.9l6.022-6.022H9.331a1.331,1.331,0,1,1,0-2.662H28.761L22.706,19.2a1.341,1.341,0,0,1,1.9-1.9l8.285,8.318A1.326,1.326,0,0,1,32.887,27.514Z" transform="translate(50.797 37.079)" />
             </svg>
         </div>
-         <div class="card" style="visibility: hidden; height: 100px">
-             <!-- fix shadow overlap -->
-         </div>
+        <div class="card" style="visibility: hidden; height: 100px">
+            <!-- fix shadow overlap -->
+        </div>
     </div>
     <story class="storyContent" v-if="$store.state.view == 'storySelect' && $store.state.story !== null" :key="storyKey" :primaryColour="primaryColour" />
 </section>
@@ -42,7 +46,7 @@ export default {
     },
     methods: {
         loadStories() {
-            this.$gsap.set(".fadeUp, .animateTitle", {scale: 1.5, perspective: 900, rotationX: -90, y: 0, y: -500, autoAlpha: 0, transformStyle: "preserve-3d" });
+            this.$gsap.set(".fadeUp, .animateTitle", { scale: 1.5, perspective: 900, rotationX: -90, y: 0, y: -500, autoAlpha: 0, transformStyle: "preserve-3d" });
             this.$gsap.set(".interactive__inner", { perspective: 900 });
 
             this.$gsap.to(".fadeUp, .animateTitle", 0.7, { scale: 1, rotationX: 0, y: 0, autoAlpha: 1, stagger: 0.2, ease: 'back.out(1.7)' })
@@ -98,16 +102,26 @@ export default {
 </script>
 
 <style lang="scss">
+.paddTop {
+    margin-top: 1920px !important;
+}
+.fullHeight{
+    height: 3840px !important;
+    max-height: none !important;
+    position: absolute !important;
+    top: 0;
+    
+}
+
 .interactive {
     display: block;
-    height: 1920px !important;
-    max-height: 1920px !important;
+    height: 1920px;
+    max-height: 1920px;
     width: 100%;
     display: block;
     position: relative;
     z-index: 1;
     overflow: hidden;
-
 
     &__inner {
         margin-top: 100px;
@@ -118,7 +132,8 @@ export default {
         overflow-y: auto;
         overflow-x: hidden;
         scrollbar-width: 0;
-        &:-scrollbar{
+
+        &:-scrollbar {
             display: none;
         }
 

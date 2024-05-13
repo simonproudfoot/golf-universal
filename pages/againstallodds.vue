@@ -8,7 +8,7 @@
     </main>
     <main v-else>
         <!-- <span v-show="$store.state.view == 'main'" class="gradientOverlay" style="height: 1200px"></span> -->
-        <heading class="mainHead opacity-0" :titleA="'AGAINST'" :titleB="'ALL ODDS'" :primaryColour="pColor"></heading>
+     
         <video ref="attractor" v-if="$store.state.view == 'main'" autoplay muted loop class="video" style="position: absolute; top: 0;">
             <source :src="require('@/assets/video/'+attractorVideo)" type="video/mp4">
         </video>
