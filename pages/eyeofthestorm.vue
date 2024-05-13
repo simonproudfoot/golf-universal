@@ -1,7 +1,7 @@
 <template>
 <div class="home">
     <main class="videoMode" v-if="$store.getters.videoMode">
-        <video @ended="$nuxt.$emit('reset', true)" v-gsap.fromTo="[{autoAlpha: 0}, {autoAlpha: 1, delay: 1, duration: 1}]" class="video" autoplay muted>
+        <video  v-gsap.fromTo="[{autoAlpha: 0}, {autoAlpha: 1, delay: 1, duration: 1}]" class="video" autoplay muted>
             <source :src="require('@/assets/video/holdingVideos/'+videoUrl)" type="video/mp4">
         </video>
     </main>
@@ -19,14 +19,13 @@
     </main>
 </div>
 </template>
-
 <script>
 export default {
     data: function () {
         return {
             pColor: '#eb6742',
-            videoUrl: 'TotemC.mp4',
-            attractorVideo: 'Totem-3_attractor.mp4'
+            videoUrl: 'TotemB.mp4',
+            attractorVideo: 'eye_of_the_storm.mp4'
         }
     },
 }

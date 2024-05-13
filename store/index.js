@@ -77,7 +77,7 @@ export const state = () => ({
     thumb: 'thumbs/Jordan_Spieth.jpg',
     title: 'Jordan Spieth, 2017',
     heading: `<h1 class="text-7xl year">1995</h1><h1 class="text-9xl font-light">JORDAN</h1><h1 class="text-9xl font-bold">SPIETH</h1>`,
-    video: 'AV 5.1.1_Jordan Spieth, 2017.mp4',
+    video: 'Jordan_Spieth.mp4',
     image: '',
     text: 'After facing trouble at the 13th Jordan Spieth shows remarkable resilience to regain the lead and win the Championship at Birkdale. Spieth’s final round, a stunning performance, is truly inspiring.'
   },
@@ -87,7 +87,7 @@ export const state = () => ({
     heading: `<h1 class="text-7xl year">1995</h1><h1 class="text-9xl font-light">SHANE</h1><h1 class="font-bold text-9xl">LOWRY</h1>`,
     video: 'AV 5.1.1_Shane Lowry, 2019.mp4',
     image: '',
-    text: 'It is 68 years since the Open has been played in Northern Ireland.  On the 18th spectators rush to witness home favourite Shane Lowry sink the winning putt and thrill the crowd.'
+    text: 'It is 68 years since The Open has been played in Northern Ireland. On the 18th spectators rush to witness home favourite Shane Lowry sink the winning putt and thrill the crowd.'
   },
   ],
   followTheOneGreen: [{
@@ -120,7 +120,7 @@ export const state = () => ({
     heading: `<h1 class="text-9xl font-light">ARNOLD</h1><h1 class="font-bold text-9xl">PALMER</h1>`,
     video: 'ArnoldPalmer.mp4',
     image: '',
-    text: 'With charisma, skill and incredible strength, Arnold Palmer ‘the King’ won back-to-back in 1961 and 1962.  His ‘army’ of supporters and love of the Open reinvigorated the Championship, especially amongst his fellow Americans.'
+    text: 'With charisma, skill and incredible strength, Arnold Palmer ‘the King’ won back-to-back in 1961 and 1962.  His ‘army’ of supporters and love of The Open reinvigorated the Championship, especially amongst his fellow Americans.'
   },
   {
     thumb: 'thumbs/JackNicklaus.png',
@@ -153,7 +153,7 @@ export const state = () => ({
     heading: `<h1 class="text-7xl year">1873</h1><h1 class="text-9xl font-light">TOM</h1><h1 class="text-9xl font-bold">KIDD</h1>`,
     video: 'eye_of_the_storm/tom_kidd.mp4',
     image: '',
-    text: 'After days of rain and with the course almost unplayable, St Andrews caddie Tom Kidd withstands the difficult conditions and holes his putt to win the Open.  The first player to win on debut.'
+    text: 'After days of rain and with the course almost unplayable, St Andrews caddie Tom Kidd withstands the difficult conditions and holes his putt to win The Open.  The first player to win on debut.'
   },
   {
     thumb: 'thumbs/eye_of_the_storm/bob_ferguson.png',
@@ -175,9 +175,9 @@ export const state = () => ({
     thumb: 'thumbs/eye_of_the_storm/reg_whitcombe.png',
     title: 'Reg Whitcombe, 1938',
     heading: `<h1 class="text-7xl year">1938</h1><h1 class="fobt-light text-9xl">REG</h1><h1 class="font-bold text-9xl">WHITCOMBE</h1>`,
-    video: 'eye_of_the_storm/reg_whitcombe.mp4',
+    video: 'eye_of_the_storm/reg.mp4',
     image: '',
-    text: 'Reg Whitcombe plays steadily through one of the worst storms to hit the Open.  One of only three finishers to score under 300, he wins the Claret Jug by two strokes.'
+    text: 'Reg Whitcombe plays steadily through one of the worst storms to hit The Open. One of only three finishers to score under 300, he wins the Claret Jug by two strokes.'
   },
   {
     thumb: 'thumbs/eye_of_the_storm/kel_nagle.png',
@@ -208,7 +208,7 @@ export const state = () => ({
     thumb: 'thumbs/eye_of_the_storm/louis_oosthuizen.png',
     title: 'Louis Oosthuizen, 2010',
     heading: `<h1 class="text-7xl year">2010</h1><h1 class="text-9xl font-light">LOUIS</h1><h1 class="font-bold text-9xl">OOSTHUIZEN</h1>`,
-    video: '',
+
     video: 'eye_of_the_storm/louis.mp4',
     text: 'A calm and composed Louis Oosthuizen wins the 2010 Open by an amazing seven strokes. Amazing given the disruption caused to play by a combination of high winds and heavy rain.'
   },
@@ -279,7 +279,7 @@ export const state = () => ({
   }],
   duels: [
     {
-      thumb: 'thumbs/duels/willie_park.png',
+      thumb: 'thumbs/duels/tom_snr.jpg',
       title: '1860 – Willie Park Sr v Tom Morris Sr',
       heading: `<h1 class="text-7xl year">1860</h1>
       <h1 class="text-9xl font-light">WILLIE</h1>
@@ -287,9 +287,9 @@ export const state = () => ({
       <h1 class="text-7xl year">v.</h1>
       <h1 class="text-9xl font-light">TOM</h1>
       <h1 class="text-9xl font-bold">MORRIS SR</h1>`,
-      video: 'duels/willie_park_sr_v_tom_morris_sr.mp4',
-      image: '',
-      text: ''
+      video: '',
+      image: 'tom_snr_full.jpg',
+      text: '1860 The first Open saw great golfing rivals, Park and Morris, go head-to-head. Opening with a 55 over Prestwick’s 12-holes, Park never lost the lead and claimed the honour of becoming the first Champion Golfer of the Year.'
     },
     {
       thumb: 'thumbs/duels/trevino_and_jacklin.png',
@@ -300,7 +300,7 @@ export const state = () => ({
       <h1 class="text-7xl year">v.</h1>
       <h1 class="text-9xl font-light">TONY</h1>
       <h1 class="text-9xl font-bold">JACKLIN</h1>`,
-      video: '',
+      video: 'duels/duels_Trevino.mp4',
       image: '',
       text: 'All square with Tony Jacklin at the 17th, Lee Trevino bunkers his drive. He makes par with a miraculous shot from off the green. Jacklin three putts and the title slips away.'
     },
@@ -313,7 +313,7 @@ export const state = () => ({
       <h1 class="text-7xl year">v.</h1>
       <h1 class="text-9xl uppercase font-light">Jack</h1>
       <h1 class="text-9xl uppercase font-bold">Nicklaus</h1>`,
-      video: 'duels/tom_watson_v_jack_nicklaus.mp4',
+      video: 'duels/1977_Great_moment.mp4', 
       image: '',
       text: 'The legendary ‘Duel in the Sun’ sees Watson and Nicklaus match each other stroke for stroke. Victory rests in Watson’s hands as he sinks a two-foot putt for the Championship.'
     },
@@ -326,7 +326,7 @@ export const state = () => ({
       <h1 class="text-7xl year">v.</h1>
       <h1 class="text-9xl uppercase font-light">Jesper</h1>
       <h1 class="text-9xl uppercase font-bold">Parnevik</h1>`,
-      video: 'duels/nick_price_v_jesper_parnevik.mp4',
+      video: 'duels/duels_Price.mp4',
       image: '',
       text: 'Twice runner-up, Nick Price becomes Champion Golfer of the Year despite a strong challenge from Jesper Parnevik. The pivotal moment comes at the 17th when Price sinks a stunning 50-foot putt for eagle.'
     },
@@ -348,7 +348,7 @@ export const state = () => ({
     thumb: 'thumbs/making_history/arnaud_massy.png',
     title: 'Arnaud Massy, 1907',
     heading: `<h1 class="text-7xl year">1907</h1><h1 class="text-9xl uppercase font-light">Arnaud</h1><h1 class="uppercase text-9xl font-bold">Massy</h1>`,
-    video: '',
+    video: 'making_history/arnaud_massy.mp4',
     image: '',
     text: 'Frenchman Arnaud Massy is the first Continental Champion Golfer of the Year.  Able to play either right or left-handed he masters the strong winds on the course at Hoylake and pushes J H Taylor into second place.'
   }, {
@@ -413,7 +413,7 @@ export const state = () => ({
     heading: `<h1 class="text-7xl year">2017</h1><h1 class="text-9xl uppercase font-light">Brandon</h1><h1 class="font-bold uppercase text-9xl">Grace</h1>`,
     video: 'making_history/brandon_grace.mp4',
     image: '',
-    text: 'On the third day at Royal Birkdale, South African Branden Grace makes eight birdies and posts a 62, the lowest round in any Major, including the 146 years of the Open.'
+    text: 'On the third day at Royal Birkdale, South African Branden Grace makes eight birdies and posts a 62, the lowest round in any Major, including the 146 years of The Open.'
   },
   ],
   againstAllOdds: [{
@@ -474,6 +474,9 @@ export const state = () => ({
 })
 
 export const getters = {
+  time(state) {
+    return state.time
+  },
 
   againstallodds(state) {
     return state.againstAllOdds

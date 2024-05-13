@@ -10,10 +10,10 @@
             </div>
         </div>
     </div>
-    <span v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="gradientOverlay" style="height: 200px; bottom: 190px"></span>
-    <div v-show="$store.state.view == 'storySelect' && $store.state.story == null" class="interactive__inner" :style="ready ? null : 'pointer-events: none'">
+    <span v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="gradientOverlay" style="height: 200px; bottom: 95px"></span>
+    <div v-if="$store.state.view == 'storySelect' && $store.state.story == null" class="interactive__inner" :style="ready ? null : 'pointer-events: none'">
         <div class="card fadeUp text-left p-8" v-for="(section, i) in storys" :key="i" @click="openStory(i)" :style="{ backgroundImage: 'url(' + require('@/assets/img/'+section.thumb+'') + ')' }">
-            <span @click="openStory(i)" class="text-5xl text-white">{{section.title}}</span>
+            <span class="text-5xl text-white">{{section.title}}</span>
             <button class="card__next"></button>
             <svg class="card__next" xmlns="http://www.w3.org/2000/svg" width="103" height="90.305" viewBox="0 0 103 90.305">
                 <defs></defs>
@@ -67,7 +67,7 @@ export default {
             this.$gsap.set(".fadeUp, .animateTitle", { y: 300, autoAlpha: 0 });
             setTimeout(() => {
                 this.loadStories()
-            }, 700);
+            }, 1500);
         }
     },
     mounted() {
@@ -106,6 +106,8 @@ export default {
     display: block;
     position: relative;
     z-index: 1;
+    overflow: hidden;
+
 
     &__inner {
         margin-top: 100px;
@@ -115,6 +117,11 @@ export default {
         height: calc(100% - 200px);
         overflow-y: auto;
         overflow-x: hidden;
+        scrollbar-width: 0;
+        &:-scrollbar{
+            display: none;
+        }
+
     }
 }
 

@@ -13,6 +13,19 @@
     font-size: 25px;
 }
 
+.app-live {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: none;
+}
+
+body {
+    // overflow: hidden;
+}
+
 /* Enter and leave animations can use different */
 /* durations and timing functions.              */
 .fade-out-enter-active {
@@ -24,12 +37,10 @@
 .fade-out-enter,
 .fade-out-leave-to {
     opacity: 0;
-
 }
 
 .fadeY-enter-active {
     transition: all 1s ease;
-
 }
 .fadeY-leave-active {
     transition: all 0.3s ease;
@@ -40,11 +51,9 @@
     transform: translateY(50px);
 }
 
-.year{
+.year {
     font-size: 4.5rem !important;
 }
-
-
 
 .gradientOverlay {
     background: rgb(25, 30, 66);
@@ -54,8 +63,8 @@
     left: 0;
     width: 100%;
     z-index: 9;
+    pointer-events: none;
 }
-
 
 .jump {
     position: fixed;
@@ -86,4 +95,12 @@
         height: 5760px;
         width: 1080px;
     }
+}
+
+button:focus {
+    outline: 0 !important;
+}
+
+::-webkit-scrollbar {
+    display: none !important;
 }

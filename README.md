@@ -1,4 +1,8 @@
-# websocket-test
+# Golf museum totems
+
+-- Last updated 13 May 2024
+-- Last updated to run on node 16
+-- If doenst work on-site remove resolutions and overrides from package.json
 
 ## Build Setup
 

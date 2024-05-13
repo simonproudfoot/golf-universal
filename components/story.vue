@@ -1,10 +1,11 @@
 <template>
 <div class="story">
+    
     <div v-if="visible.image" class="video video--image" :style="{ backgroundImage: 'url(' + require('@/assets/img/'+visible.image+'') + ')' }" :key="selected">
         <span class="gradientOverlay" style="height:915px"></span>
     </div>
     <div v-if="visible.video" class="video" :key="selected">
-        <video autoplay loop>
+        <video autoplay>
             <source :src="require('@/assets/video/'+visible.video)" type="video/mp4">
         </video>
         <span class="gradientOverlay" style="height:915px"></span>

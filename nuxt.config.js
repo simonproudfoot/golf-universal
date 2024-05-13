@@ -7,9 +7,8 @@ export default {
   router: {
 
     // uncomment if hosting on apache server 
-    // base: '/golf' //
+   // base: '/golf' //
   },
-
 
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -73,7 +72,10 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/style-resources',
+    //'@nuxtjs/axios'
   ],
+
+
 
   styleResources: {
     scss: ['./assets/scss/*.scss']
@@ -82,9 +84,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-
-
-
     babel: {
       plugins: [
         // https://github.com/nuxt/nuxt.js/issues/9224#issuecomment-830577523
