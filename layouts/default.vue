@@ -1,10 +1,11 @@
 <template>
-<div id="app" @contextmenu.prevent="">
-    <div id="app" :class="!devMode ? 'app-live' : null">
-        <Nuxt />
-        <v-idle v-if="!$store.getters.videoMode" style="display: none" :duration="100" :loop="true" @idle="goHome" />
+    <div id="app" @contextmenu.prevent="">
+        <div id="app" :class="!devMode ? 'app-live' : null">
+            <Nuxt />
+            <v-idle v-if="!$store.getters.videoMode" style="display: none" :duration="100" :loop="true"
+                @idle="goHome" />
+        </div>
     </div>
-</div>
 </template>
 
 <script>
@@ -56,12 +57,11 @@ export default {
     },
     watch: {
         "$store.getters.time"(val) {
-            var videoTime = 5;
+            var videoTime = 5; // change this to the duraration of the show 
             if (val === 0) {
                 this.reset();
                 setTimeout(() => {
                     this.reset(true);
-                    //  }, 27000)
                 }, videoTime * 60 * 1000);
             }
         },
